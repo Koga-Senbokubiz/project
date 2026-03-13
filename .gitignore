@@ -1,6 +1,9 @@
+work/
+logs/
 data/
 generated/
-logs/
 __pycache__/
 *.pyc
 *.log
+*.tmp
+*.bak

@@ -1,0 +1,54 @@
+<?xml version="1.0" standalone="yes"?>
+<PatternInfo>
+  <xs:schema id="PatternInfo" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="PatternInfo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="マッピング">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="変数ID" type="xs:string" />
+              <xs:attribute name="変換元データ" type="xs:string" />
+              <xs:attribute name="変換先データ" type="xs:string" />
+              <xs:attribute name="前処理" type="xs:string" />
+              <xs:attribute name="後処理" type="xs:string" />
+              <xs:attribute name="変換元レイアウト" type="xs:string" />
+              <xs:attribute name="変換先レイアウト" type="xs:string" />
+              <xs:attribute name="ロジック" type="xs:string" />
+              <xs:attribute name="変換しない" type="xs:string" />
+              <xs:attribute name="中間出力する" type="xs:string" />
+              <xs:attribute name="変換種別" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="変数">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="名前" type="xs:string" />
+              <xs:attribute name="値" type="xs:string" />
+              <xs:attribute name="変数ID" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//マッピング" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="変数_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//変数" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <マッピング ID="5" 変数ID="0" 変換元データ="基本形1_3：ReplenishmentProposal_sample_1_2_1.csv" 変換先データ="基本形1_3：ReplenishmentProposal_sample_1_2_1.xml" 前処理="" 後処理="" 変換元レイアウト="基本形1_3：納品提案Ver1_2_1_CSV.xml" 変換先レイアウト="基本形1_3：納品提案Ver1_2_1.xml" ロジック="基本形1_3：納品提案Ver1_2_1（CSV→XML）_基本形1_3：納品提案Ver1_2_1_CSV_基本形1_3：納品提案Ver1_2_1.xml" 変換しない="False" 中間出力する="False" 変換種別="1" />
+  <変数 ID="1" 名前="変換元ファイルが存在しなかった場合の動作" 値="0" 変数ID="0" />
+  <変数 ID="2" 名前="変換元ファイルが空だった場合の動作" 値="0" 変数ID="0" />
+  <変数 ID="3" 名前="変換エラー時の動作" 値="0" 変数ID="0" />
+  <変数 ID="4" 名前="変換元ファイルの扱い" 値="0" 変数ID="0" />
+  <変数 ID="5" 名前="変換先ファイルの扱い" 値="0" 変数ID="0" />
+  <変数 ID="6" 名前="変換元ファイルが存在しなかった場合に空のファイルを出力するかどうか" 値="1" 変数ID="0" />
+  <変数 ID="7" 名前="変換元ファイルが存在しなかった場合に詳細レポートを出力するかどうか" 値="0" 変数ID="0" />
+  <変数 ID="8" 名前="変換元ファイルが空だった場合に空のファイルを出力するかどうか" 値="1" 変数ID="0" />
+  <変数 ID="9" 名前="変換元ファイルが空だった場合に詳細レポートを出力するかどうか" 値="0" 変数ID="0" />
+  <変数 ID="10" 名前="コメント" 値="XMLメッセージ Replenishment Proposal (納品提案)" 変数ID="0" />
+</PatternInfo>

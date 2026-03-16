@@ -1,0 +1,791 @@
+<?xml version="1.0" standalone="yes"?>
+<マッピングレイアウト>
+  <xs:schema id="マッピングレイアウト" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="マッピングレイアウト" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="レイアウト">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="Name" type="xs:string" />
+              <xs:attribute name="Type" type="xs:int" />
+              <xs:attribute name="PropertyID" type="xs:int" />
+              <xs:attribute name="ParentsID" type="xs:int" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="データストア">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="データストア名" type="xs:string" />
+              <xs:attribute name="フォーマット" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="データストアCSV">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="レコード判定" type="xs:string" />
+              <xs:attribute name="区切り文字" type="xs:string" />
+              <xs:attribute name="区切り文字コード" type="xs:string" />
+              <xs:attribute name="囲み" type="xs:string" />
+              <xs:attribute name="空の囲み" type="xs:string" />
+              <xs:attribute name="レコードセパレータフラグ" type="xs:string" />
+              <xs:attribute name="レコードセパレータコード" type="xs:string" />
+              <xs:attribute name="不明レコードスキップ" type="xs:string" />
+              <xs:attribute name="ヘッダ行数" type="xs:string" />
+              <xs:attribute name="ヘッダ行出力" type="xs:string" />
+              <xs:attribute name="桁あふれ" type="xs:string" />
+              <xs:attribute name="文字コード" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="レコードグループ">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="レコードグループ名" type="xs:string" />
+              <xs:attribute name="レコードグループの繰り返し回数" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="レコード">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="レコード名" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="レコードCSV">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="区分値" type="xs:string" />
+              <xs:attribute name="インデックス" type="xs:string" />
+              <xs:attribute name="レコード数" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="レコード補助情報">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="レコード出力タイプ" type="xs:string" />
+              <xs:attribute name="項目ID配列" type="xs:string" />
+              <xs:attribute name="評価方法" type="xs:string" />
+              <xs:attribute name="評価順序" type="xs:string" />
+              <xs:attribute name="with空削除" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="レコードCSV区分値判定情報">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="区分値" type="xs:string" />
+              <xs:attribute name="インデックス" type="xs:string" />
+              <xs:attribute name="ParentID" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="レコードFixed区分値判定情報">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="区分値" type="xs:string" />
+              <xs:attribute name="開始桁" type="xs:string" />
+              <xs:attribute name="桁数" type="xs:string" />
+              <xs:attribute name="文字コード" type="xs:string" />
+              <xs:attribute name="属性" type="xs:string" />
+              <xs:attribute name="位置" type="xs:string" />
+              <xs:attribute name="パディング" type="xs:string" />
+              <xs:attribute name="SISO" type="xs:string" />
+              <xs:attribute name="EBCDICコードタイプ" type="xs:string" />
+              <xs:attribute name="JEF_KEIS漢字コードタイプ" type="xs:string" />
+              <xs:attribute name="レコード数" type="xs:string" />
+              <xs:attribute name="外字使用" type="xs:string" />
+              <xs:attribute name="ParentID" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="項目グループ">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="項目グループ名" type="xs:string" />
+              <xs:attribute name="項目グループの繰り返し回数" type="xs:string" />
+              <xs:attribute name="項目グループ種別" type="xs:string" />
+              <xs:attribute name="必須" type="xs:string" />
+              <xs:attribute name="タグの出現" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="項目">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="項目名" type="xs:string" />
+              <xs:attribute name="項目ID" type="xs:string" />
+              <xs:attribute name="属性" type="xs:string" />
+              <xs:attribute name="属性チェック" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="項目CSV">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="桁数" type="xs:string" />
+              <xs:attribute name="空白を削除する" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="項目補助情報">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="全角" type="xs:string" />
+              <xs:attribute name="大文字" type="xs:string" />
+              <xs:attribute name="暦書式" type="xs:string" />
+              <xs:attribute name="暦エラータイプ" type="xs:string" />
+              <xs:attribute name="レコード出力タイプ" type="xs:string" />
+              <xs:attribute name="最終出力タイプ" type="xs:string" />
+              <xs:attribute name="最終出力値" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//レイアウト" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="データストア_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//データストア" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="データストアCSV_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//データストアCSV" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="レコードグループ_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//レコードグループ" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="レコード_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//レコード" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="レコードCSV_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//レコードCSV" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="レコード補助情報_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//レコード補助情報" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="レコードCSV区分値判定情報_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//レコードCSV区分値判定情報" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="レコードFixed区分値判定情報_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//レコードFixed区分値判定情報" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="項目グループ_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//項目グループ" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="項目_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//項目" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="項目CSV_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//項目CSV" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="項目補助情報_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//項目補助情報" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <レイアウト ID="1" Name="データストア" Type="1" PropertyID="1" ParentsID="0" />
+  <レイアウト ID="439" Name="サンプルレイアウト" Type="3" PropertyID="10" ParentsID="1" />
+  <レイアウト ID="441" Name="sh:Identifier" Type="5" PropertyID="430" ParentsID="439" />
+  <レイアウト ID="443" Name="sh:Identifier" Type="5" PropertyID="432" ParentsID="439" />
+  <レイアウト ID="449" Name="sh:MultipleType" Type="5" PropertyID="438" ParentsID="439" />
+  <レイアウト ID="453" Name="sh:Identifier" Type="5" PropertyID="442" ParentsID="439" />
+  <レイアウト ID="455" Name="senderStationAddress" Type="5" PropertyID="444" ParentsID="439" />
+  <レイアウト ID="456" Name="ultimateReceiverStationAddress" Type="5" PropertyID="445" ParentsID="439" />
+  <レイアウト ID="457" Name="immediateReceiverStationAddress" Type="5" PropertyID="446" ParentsID="439" />
+  <レイアウト ID="458" Name="numberOfTradingDocuments" Type="5" PropertyID="447" ParentsID="439" />
+  <レイアウト ID="459" Name="key" Type="5" PropertyID="448" ParentsID="439" />
+  <レイアウト ID="460" Name="value" Type="5" PropertyID="449" ParentsID="439" />
+  <レイアウト ID="463" Name="namespace" Type="5" PropertyID="452" ParentsID="439" />
+  <レイアウト ID="464" Name="version" Type="5" PropertyID="453" ParentsID="439" />
+  <レイアウト ID="465" Name="code" Type="5" PropertyID="454" ParentsID="439" />
+  <レイアウト ID="466" Name="gln" Type="5" PropertyID="455" ParentsID="439" />
+  <レイアウト ID="467" Name="name" Type="5" PropertyID="456" ParentsID="439" />
+  <レイアウト ID="468" Name="name_sbcs" Type="5" PropertyID="457" ParentsID="439" />
+  <レイアウト ID="469" Name="code" Type="5" PropertyID="458" ParentsID="439" />
+  <レイアウト ID="470" Name="gln" Type="5" PropertyID="459" ParentsID="439" />
+  <レイアウト ID="471" Name="name" Type="5" PropertyID="460" ParentsID="439" />
+  <レイアウト ID="472" Name="name_sbcs" Type="5" PropertyID="461" ParentsID="439" />
+  <レイアウト ID="473" Name="branchNumber" Type="5" PropertyID="462" ParentsID="439" />
+  <レイアウト ID="474" Name="shipLocationCode" Type="5" PropertyID="463" ParentsID="439" />
+  <レイアウト ID="475" Name="code" Type="5" PropertyID="464" ParentsID="439" />
+  <レイアウト ID="476" Name="gln" Type="5" PropertyID="465" ParentsID="439" />
+  <レイアウト ID="477" Name="name" Type="5" PropertyID="466" ParentsID="439" />
+  <レイアウト ID="478" Name="name_sbcs" Type="5" PropertyID="467" ParentsID="439" />
+  <レイアウト ID="479" Name="gln" Type="5" PropertyID="468" ParentsID="439" />
+  <レイアウト ID="480" Name="name" Type="5" PropertyID="469" ParentsID="439" />
+  <レイアウト ID="481" Name="name_sbcs" Type="5" PropertyID="470" ParentsID="439" />
+  <レイアウト ID="482" Name="telephone" Type="5" PropertyID="471" ParentsID="439" />
+  <レイアウト ID="483" Name="fax" Type="5" PropertyID="472" ParentsID="439" />
+  <レイアウト ID="484" Name="deliverySlipNumber" Type="5" PropertyID="473" ParentsID="439" />
+  <レイアウト ID="485" Name="totalPackages" Type="5" PropertyID="474" ParentsID="439" />
+  <レイアウト ID="486" Name="deliveryServiceCode" Type="5" PropertyID="475" ParentsID="439" />
+  <レイアウト ID="487" Name="deliveryTime" Type="5" PropertyID="476" ParentsID="439" />
+  <レイアウト ID="488" Name="transportationCode" Type="5" PropertyID="477" ParentsID="439" />
+  <レイアウト ID="489" Name="shipDate" Type="5" PropertyID="478" ParentsID="439" />
+  <レイアウト ID="490" Name="deliveryDate" Type="5" PropertyID="479" ParentsID="439" />
+  <レイアウト ID="491" Name="revisedDeliveryDate" Type="5" PropertyID="480" ParentsID="439" />
+  <レイアウト ID="492" Name="code" Type="5" PropertyID="481" ParentsID="439" />
+  <レイアウト ID="493" Name="gln" Type="5" PropertyID="482" ParentsID="439" />
+  <レイアウト ID="494" Name="name" Type="5" PropertyID="483" ParentsID="439" />
+  <レイアウト ID="495" Name="name_sbcs" Type="5" PropertyID="484" ParentsID="439" />
+  <レイアウト ID="496" Name="code" Type="5" PropertyID="485" ParentsID="439" />
+  <レイアウト ID="497" Name="gln" Type="5" PropertyID="486" ParentsID="439" />
+  <レイアウト ID="498" Name="name" Type="5" PropertyID="487" ParentsID="439" />
+  <レイアウト ID="499" Name="name_sbcs" Type="5" PropertyID="488" ParentsID="439" />
+  <レイアウト ID="500" Name="containerNumber" Type="5" PropertyID="489" ParentsID="439" />
+  <レイアウト ID="501" Name="parentPackageNumber" Type="5" PropertyID="490" ParentsID="439" />
+  <レイアウト ID="502" Name="packageNumber" Type="5" PropertyID="491" ParentsID="439" />
+  <レイアウト ID="503" Name="code" Type="5" PropertyID="492" ParentsID="439" />
+  <レイアウト ID="504" Name="name" Type="5" PropertyID="493" ParentsID="439" />
+  <レイアウト ID="505" Name="name_sbcs" Type="5" PropertyID="494" ParentsID="439" />
+  <レイアウト ID="506" Name="campaignStartDate" Type="5" PropertyID="495" ParentsID="439" />
+  <レイアウト ID="507" Name="barcodePrint" Type="5" PropertyID="496" ParentsID="439" />
+  <レイアウト ID="508" Name="categoryNamePrint1" Type="5" PropertyID="497" ParentsID="439" />
+  <レイアウト ID="509" Name="categoryNamePrint2" Type="5" PropertyID="498" ParentsID="439" />
+  <レイアウト ID="510" Name="receiverAbbrName" Type="5" PropertyID="499" ParentsID="439" />
+  <レイアウト ID="511" Name="text" Type="5" PropertyID="500" ParentsID="439" />
+  <レイアウト ID="512" Name="text_sbcs" Type="5" PropertyID="501" ParentsID="439" />
+  <レイアウト ID="513" Name="tradeNumber" Type="5" PropertyID="502" ParentsID="439" />
+  <レイアウト ID="514" Name="lineNumber" Type="5" PropertyID="503" ParentsID="439" />
+  <レイアウト ID="515" Name="orderDate" Type="5" PropertyID="504" ParentsID="439" />
+  <レイアウト ID="516" Name="deliveryDateToReceiver" Type="5" PropertyID="505" ParentsID="439" />
+  <レイアウト ID="517" Name="gtin" Type="5" PropertyID="506" ParentsID="439" />
+  <レイアウト ID="518" Name="orderItemCode" Type="5" PropertyID="507" ParentsID="439" />
+  <レイアウト ID="519" Name="codeType" Type="5" PropertyID="508" ParentsID="439" />
+  <レイアウト ID="520" Name="supplierItemCode" Type="5" PropertyID="509" ParentsID="439" />
+  <レイアウト ID="521" Name="majorCategory" Type="5" PropertyID="510" ParentsID="439" />
+  <レイアウト ID="522" Name="subMajorCategory" Type="5" PropertyID="511" ParentsID="439" />
+  <レイアウト ID="523" Name="minorCategory" Type="5" PropertyID="512" ParentsID="439" />
+  <レイアウト ID="524" Name="detailedCategory" Type="5" PropertyID="513" ParentsID="439" />
+  <レイアウト ID="525" Name="sellByDate" Type="5" PropertyID="514" ParentsID="439" />
+  <レイアウト ID="526" Name="productionDate" Type="5" PropertyID="515" ParentsID="439" />
+  <レイアウト ID="527" Name="lotNumber" Type="5" PropertyID="516" ParentsID="439" />
+  <レイアウト ID="528" Name="goodsClassificationCode" Type="5" PropertyID="517" ParentsID="439" />
+  <レイアウト ID="529" Name="orderClassificationCode" Type="5" PropertyID="518" ParentsID="439" />
+  <レイアウト ID="530" Name="eosCode" Type="5" PropertyID="519" ParentsID="439" />
+  <レイアウト ID="531" Name="tradeTypeCode" Type="5" PropertyID="520" ParentsID="439" />
+  <レイアウト ID="532" Name="statutoryClassificationCode" Type="5" PropertyID="521" ParentsID="439" />
+  <レイアウト ID="533" Name="unitMultiple" Type="5" PropertyID="522" ParentsID="439" />
+  <レイアウト ID="534" Name="unitOfMeasure" Type="5" PropertyID="523" ParentsID="439" />
+  <レイアウト ID="535" Name="quantity" Type="5" PropertyID="524" ParentsID="439" />
+  <レイアウト ID="536" Name="numOfOrderUnits" Type="5" PropertyID="525" ParentsID="439" />
+  <レイアウト ID="537" Name="quantity" Type="5" PropertyID="526" ParentsID="439" />
+  <レイアウト ID="538" Name="numOfOrderUnits" Type="5" PropertyID="527" ParentsID="439" />
+  <レイアウト ID="539" Name="unitNetPrice" Type="5" PropertyID="528" ParentsID="439" />
+  <レイアウト ID="540" Name="unitSellingPrice" Type="5" PropertyID="529" ParentsID="439" />
+  <レイアウト ID="541" Name="itfCode" Type="5" PropertyID="530" ParentsID="439" />
+  <レイアウト ID="542" Name="numOfItemsInPackage" Type="5" PropertyID="531" ParentsID="439" />
+  <レイアウト ID="543" Name="numOfPackages" Type="5" PropertyID="532" ParentsID="439" />
+  <レイアウト ID="544" Name="code" Type="5" PropertyID="533" ParentsID="439" />
+  <レイアウト ID="545" Name="name" Type="5" PropertyID="534" ParentsID="439" />
+  <レイアウト ID="546" Name="name_sbcs" Type="5" PropertyID="535" ParentsID="439" />
+  <レイアウト ID="547" Name="campaignStartDate" Type="5" PropertyID="536" ParentsID="439" />
+  <レイアウト ID="548" Name="tradeNumber" Type="5" PropertyID="537" ParentsID="439" />
+  <レイアウト ID="549" Name="lineNumber" Type="5" PropertyID="538" ParentsID="439" />
+  <レイアウト ID="550" Name="orderDate" Type="5" PropertyID="539" ParentsID="439" />
+  <レイアウト ID="551" Name="deliveryDateToReceiver" Type="5" PropertyID="540" ParentsID="439" />
+  <レイアウト ID="552" Name="gtin" Type="5" PropertyID="541" ParentsID="439" />
+  <レイアウト ID="553" Name="orderItemCode" Type="5" PropertyID="542" ParentsID="439" />
+  <レイアウト ID="554" Name="codeType" Type="5" PropertyID="543" ParentsID="439" />
+  <レイアウト ID="555" Name="supplierItemCode" Type="5" PropertyID="544" ParentsID="439" />
+  <レイアウト ID="556" Name="majorCategory" Type="5" PropertyID="545" ParentsID="439" />
+  <レイアウト ID="557" Name="subMajorCategory" Type="5" PropertyID="546" ParentsID="439" />
+  <レイアウト ID="558" Name="minorCategory" Type="5" PropertyID="547" ParentsID="439" />
+  <レイアウト ID="559" Name="detailedCategory" Type="5" PropertyID="548" ParentsID="439" />
+  <レイアウト ID="560" Name="sellByDate" Type="5" PropertyID="549" ParentsID="439" />
+  <レイアウト ID="561" Name="productionDate" Type="5" PropertyID="550" ParentsID="439" />
+  <レイアウト ID="562" Name="lotNumber" Type="5" PropertyID="551" ParentsID="439" />
+  <レイアウト ID="563" Name="goodsClassificationCode" Type="5" PropertyID="552" ParentsID="439" />
+  <レイアウト ID="564" Name="orderClassificationCode" Type="5" PropertyID="553" ParentsID="439" />
+  <レイアウト ID="565" Name="eosCode" Type="5" PropertyID="554" ParentsID="439" />
+  <レイアウト ID="566" Name="tradeTypeCode" Type="5" PropertyID="555" ParentsID="439" />
+  <レイアウト ID="567" Name="statutoryClassificationCode" Type="5" PropertyID="556" ParentsID="439" />
+  <レイアウト ID="568" Name="unitMultiple" Type="5" PropertyID="557" ParentsID="439" />
+  <レイアウト ID="569" Name="unitOfMeasure" Type="5" PropertyID="558" ParentsID="439" />
+  <レイアウト ID="570" Name="quantity" Type="5" PropertyID="559" ParentsID="439" />
+  <レイアウト ID="571" Name="numOfOrderUnits" Type="5" PropertyID="560" ParentsID="439" />
+  <レイアウト ID="572" Name="quantity" Type="5" PropertyID="561" ParentsID="439" />
+  <レイアウト ID="573" Name="numOfOrderUnits" Type="5" PropertyID="562" ParentsID="439" />
+  <レイアウト ID="574" Name="unitNetPrice" Type="5" PropertyID="563" ParentsID="439" />
+  <レイアウト ID="575" Name="unitSellingPrice" Type="5" PropertyID="564" ParentsID="439" />
+  <レイアウト ID="576" Name="quantity" Type="5" PropertyID="565" ParentsID="439" />
+  <レイアウト ID="577" Name="numOfOrderUnits" Type="5" PropertyID="566" ParentsID="439" />
+  <レイアウト ID="578" Name="stockoutReasonCode" Type="5" PropertyID="567" ParentsID="439" />
+  <レイアウト ID="579" Name="tradeNumber" Type="5" PropertyID="568" ParentsID="439" />
+  <レイアウト ID="580" Name="lineNumber" Type="5" PropertyID="569" ParentsID="439" />
+  <レイアウト ID="581" Name="orderDate" Type="5" PropertyID="570" ParentsID="439" />
+  <レイアウト ID="582" Name="deliveryDateToReceiver" Type="5" PropertyID="571" ParentsID="439" />
+  <レイアウト ID="583" Name="gtin" Type="5" PropertyID="572" ParentsID="439" />
+  <レイアウト ID="584" Name="orderItemCode" Type="5" PropertyID="573" ParentsID="439" />
+  <レイアウト ID="585" Name="codeType" Type="5" PropertyID="574" ParentsID="439" />
+  <レイアウト ID="586" Name="supplierItemCode" Type="5" PropertyID="575" ParentsID="439" />
+  <レイアウト ID="587" Name="majorCategory" Type="5" PropertyID="576" ParentsID="439" />
+  <レイアウト ID="588" Name="subMajorCategory" Type="5" PropertyID="577" ParentsID="439" />
+  <レイアウト ID="589" Name="minorCategory" Type="5" PropertyID="578" ParentsID="439" />
+  <レイアウト ID="590" Name="detailedCategory" Type="5" PropertyID="579" ParentsID="439" />
+  <レイアウト ID="591" Name="goodsClassificationCode" Type="5" PropertyID="580" ParentsID="439" />
+  <レイアウト ID="592" Name="orderClassificationCode" Type="5" PropertyID="581" ParentsID="439" />
+  <レイアウト ID="593" Name="eosCode" Type="5" PropertyID="582" ParentsID="439" />
+  <レイアウト ID="594" Name="tradeTypeCode" Type="5" PropertyID="583" ParentsID="439" />
+  <レイアウト ID="595" Name="unitMultiple" Type="5" PropertyID="584" ParentsID="439" />
+  <レイアウト ID="596" Name="unitOfMeasure" Type="5" PropertyID="585" ParentsID="439" />
+  <レイアウト ID="597" Name="quantity" Type="5" PropertyID="586" ParentsID="439" />
+  <レイアウト ID="598" Name="numOfOrderUnits" Type="5" PropertyID="587" ParentsID="439" />
+  <レイアウト ID="599" Name="unitNetPrice" Type="5" PropertyID="588" ParentsID="439" />
+  <レイアウト ID="600" Name="unitSellingPrice" Type="5" PropertyID="589" ParentsID="439" />
+  <データストア ID="1" フォーマット="2" />
+  <データストアCSV ID="1" レコード判定="1" 区切り文字="1" 区切り文字コード="" 囲み="1" 空の囲み="1" レコードセパレータフラグ="4" レコードセパレータコード="" 不明レコードスキップ="False" ヘッダ行数="0" ヘッダ行出力="False" 桁あふれ="0" 文字コード="1" />
+  <レコード ID="10" レコード名="サンプルレイアウト" />
+  <レコードCSV ID="10" 区分値="" インデックス="1" レコード数="0" />
+  <レコード補助情報 ID="10" レコード出力タイプ="0" 項目ID配列="" 評価方法="0" 評価順序="0" with空削除="False" />
+  <レコードCSV区分値判定情報 ID="1" 区分値="" インデックス="1" ParentID="10" />
+  <項目 ID="430" 項目名="sh:Identifier" 項目ID="送信者ＩＤ" 属性="1" 属性チェック="0" />
+  <項目 ID="432" 項目名="sh:Identifier" 項目ID="受信者ＩＤ" 属性="1" 属性チェック="0" />
+  <項目 ID="438" 項目名="sh:MultipleType" 項目ID="未使用" 属性="1" 属性チェック="0" />
+  <項目 ID="442" 項目名="sh:Identifier" 項目ID="テスト区分ＩＤ・最終送信先ＩＤ" 属性="1" 属性チェック="0" />
+  <項目 ID="444" 項目名="senderStationAddress" 項目ID="送信者ステーションアドレス" 属性="1" 属性チェック="0" />
+  <項目 ID="445" 項目名="ultimateReceiverStationAddress" 項目ID="最終受信者ステーションアドレス" 属性="1" 属性チェック="0" />
+  <項目 ID="446" 項目名="immediateReceiverStationAddress" 項目ID="直接受信者ステーションアドレス" 属性="1" 属性チェック="0" />
+  <項目 ID="447" 項目名="numberOfTradingDocuments" 項目ID="取引数" 属性="1" 属性チェック="0" />
+  <項目 ID="448" 項目名="key" 項目ID="システム情報：キー" 属性="1" 属性チェック="0" />
+  <項目 ID="449" 項目名="value" 項目ID="システム情報：値" 属性="1" 属性チェック="0" />
+  <項目 ID="452" 項目名="namespace" 項目ID="拡張情報：ネームスペース" 属性="1" 属性チェック="0" />
+  <項目 ID="453" 項目名="version" 項目ID="拡張情報：バージョン番号" 属性="1" 属性チェック="0" />
+  <項目 ID="454" 項目名="code" 項目ID="請求取引先コード" 属性="1" 属性チェック="0" />
+  <項目 ID="455" 項目名="gln" 項目ID="請求取引先GLN" 属性="1" 属性チェック="0" />
+  <項目 ID="456" 項目名="name" 項目ID="請求取引先名" 属性="1" 属性チェック="0" />
+  <項目 ID="457" 項目名="name_sbcs" 項目ID="請求取引先名カナ" 属性="1" 属性チェック="0" />
+  <項目 ID="458" 項目名="code" 項目ID="取引先コード" 属性="1" 属性チェック="0" />
+  <項目 ID="459" 項目名="gln" 項目ID="取引先GLN" 属性="1" 属性チェック="0" />
+  <項目 ID="460" 項目名="name" 項目ID="取引先名称" 属性="1" 属性チェック="0" />
+  <項目 ID="461" 項目名="name_sbcs" 項目ID="取引先名称カナ" 属性="1" 属性チェック="0" />
+  <項目 ID="462" 項目名="branchNumber" 項目ID="取引先：枝番" 属性="1" 属性チェック="0" />
+  <項目 ID="463" 項目名="shipLocationCode" 項目ID="出荷先コード" 属性="1" 属性チェック="0" />
+  <項目 ID="464" 項目名="code" 項目ID="直接納品先コード" 属性="1" 属性チェック="0" />
+  <項目 ID="465" 項目名="gln" 項目ID="直接納品先GLN" 属性="1" 属性チェック="0" />
+  <項目 ID="466" 項目名="name" 項目ID="直接納品先名称" 属性="1" 属性チェック="0" />
+  <項目 ID="467" 項目名="name_sbcs" 項目ID="直接納品先名称カナ" 属性="1" 属性チェック="0" />
+  <項目 ID="468" 項目名="gln" 項目ID="出荷場所GLN" 属性="1" 属性チェック="0" />
+  <項目 ID="469" 項目名="name" 項目ID="担当者" 属性="1" 属性チェック="0" />
+  <項目 ID="470" 項目名="name_sbcs" 項目ID="担当者カナ" 属性="1" 属性チェック="0" />
+  <項目 ID="471" 項目名="telephone" 項目ID="連絡先(TEL)" 属性="1" 属性チェック="0" />
+  <項目 ID="472" 項目名="fax" 項目ID="連絡先(FAX)" 属性="1" 属性チェック="0" />
+  <項目 ID="473" 項目名="deliverySlipNumber" 項目ID="センター納品書番号" 属性="1" 属性チェック="0" />
+  <項目 ID="474" 項目名="totalPackages" 項目ID="出荷総梱包数" 属性="1" 属性チェック="0" />
+  <項目 ID="475" 項目名="deliveryServiceCode" 項目ID="便No" 属性="1" 属性チェック="0" />
+  <項目 ID="476" 項目名="deliveryTime" 項目ID="指定納品時刻" 属性="1" 属性チェック="0" />
+  <項目 ID="477" 項目名="transportationCode" 項目ID="輸送手段" 属性="1" 属性チェック="0" />
+  <項目 ID="478" 項目名="shipDate" 項目ID="取引先出荷日" 属性="1" 属性チェック="0" />
+  <項目 ID="479" 項目名="deliveryDate" 項目ID="直接納品先納品日" 属性="1" 属性チェック="0" />
+  <項目 ID="480" 項目名="revisedDeliveryDate" 項目ID="訂正後直接納品先納品日" 属性="1" 属性チェック="0" />
+  <項目 ID="481" 項目名="code" 項目ID="発注者コード" 属性="1" 属性チェック="0" />
+  <項目 ID="482" 項目名="gln" 項目ID="発注者GLN" 属性="1" 属性チェック="0" />
+  <項目 ID="483" 項目名="name" 項目ID="発注者名称" 属性="1" 属性チェック="0" />
+  <項目 ID="484" 項目名="name_sbcs" 項目ID="発注者名称カナ" 属性="1" 属性チェック="0" />
+  <項目 ID="485" 項目名="code" 項目ID="最終納品先コード" 属性="1" 属性チェック="0" />
+  <項目 ID="486" 項目名="gln" 項目ID="最終納品先GLN" 属性="1" 属性チェック="0" />
+  <項目 ID="487" 項目名="name" 項目ID="最終納品先名称" 属性="1" 属性チェック="0" />
+  <項目 ID="488" 項目名="name_sbcs" 項目ID="最終納品先名称カナ" 属性="1" 属性チェック="0" />
+  <項目 ID="489" 項目名="containerNumber" 項目ID="カゴテナNO" 属性="1" 属性チェック="0" />
+  <項目 ID="490" 項目名="parentPackageNumber" 項目ID="親梱包NO" 属性="1" 属性チェック="0" />
+  <項目 ID="491" 項目名="packageNumber" 項目ID="梱包NO" 属性="1" 属性チェック="0" />
+  <項目 ID="492" 項目名="code" 項目ID="陳列場所コード" 属性="1" 属性チェック="0" />
+  <項目 ID="493" 項目名="name" 項目ID="陳列場所名称" 属性="1" 属性チェック="0" />
+  <項目 ID="494" 項目名="name_sbcs" 項目ID="陳列場所名称カナ" 属性="1" 属性チェック="0" />
+  <項目 ID="495" 項目名="campaignStartDate" 項目ID="販促開始日" 属性="1" 属性チェック="0" />
+  <項目 ID="496" 項目名="barcodePrint" 項目ID="バーコード情報" 属性="1" 属性チェック="0" />
+  <項目 ID="497" 項目名="categoryNamePrint1" 項目ID="カテゴリー名称1（印字用）" 属性="1" 属性チェック="0" />
+  <項目 ID="498" 項目名="categoryNamePrint2" 項目ID="カテゴリー名称2（印字用）" 属性="1" 属性チェック="0" />
+  <項目 ID="499" 項目名="receiverAbbrName" 項目ID="最終納品先略称（印字用）" 属性="1" 属性チェック="0" />
+  <項目 ID="500" 項目名="text" 項目ID="ラベル自由使用欄（印字用）" 属性="1" 属性チェック="0" />
+  <項目 ID="501" 項目名="text_sbcs" 項目ID="ラベル自由使用欄半角カナ（印字用）" 属性="1" 属性チェック="0" />
+  <項目 ID="502" 項目名="tradeNumber" 項目ID="取引番号（発注・返品）" 属性="1" 属性チェック="0" />
+  <項目 ID="503" 項目名="lineNumber" 項目ID="取引明細番号（発注・返品）" 属性="1" 属性チェック="0" />
+  <項目 ID="504" 項目名="orderDate" 項目ID="発注日" 属性="1" 属性チェック="0" />
+  <項目 ID="505" 項目名="deliveryDateToReceiver" 項目ID="最終納品先納品日" 属性="1" 属性チェック="0" />
+  <項目 ID="506" 項目名="gtin" 項目ID="商品コード（ＧTIN）" 属性="1" 属性チェック="0" />
+  <項目 ID="507" 項目名="orderItemCode" 項目ID="商品コード（発注用）" 属性="1" 属性チェック="0" />
+  <項目 ID="508" 項目名="codeType" 項目ID="商品コード区分" 属性="1" 属性チェック="0" />
+  <項目 ID="509" 項目名="supplierItemCode" 項目ID="商品コード（取引先）" 属性="1" 属性チェック="0" />
+  <項目 ID="510" 項目名="majorCategory" 項目ID="商品分類（大）" 属性="1" 属性チェック="0" />
+  <項目 ID="511" 項目名="subMajorCategory" 項目ID="商品分類（中）" 属性="1" 属性チェック="0" />
+  <項目 ID="512" 項目名="minorCategory" 項目ID="商品分類（小）" 属性="1" 属性チェック="0" />
+  <項目 ID="513" 項目名="detailedCategory" 項目ID="商品分類（細）" 属性="1" 属性チェック="0" />
+  <項目 ID="514" 項目名="sellByDate" 項目ID="賞味期限日" 属性="1" 属性チェック="0" />
+  <項目 ID="515" 項目名="productionDate" 項目ID="製造日" 属性="1" 属性チェック="0" />
+  <項目 ID="516" 項目名="lotNumber" 項目ID="製造番号" 属性="1" 属性チェック="0" />
+  <項目 ID="517" 項目名="goodsClassificationCode" 項目ID="商品区分" 属性="1" 属性チェック="0" />
+  <項目 ID="518" 項目名="orderClassificationCode" 項目ID="発注区分" 属性="1" 属性チェック="0" />
+  <項目 ID="519" 項目名="eosCode" 項目ID="EOS区分" 属性="1" 属性チェック="0" />
+  <項目 ID="520" 項目名="tradeTypeCode" 項目ID="処理種別" 属性="1" 属性チェック="0" />
+  <項目 ID="521" 項目名="statutoryClassificationCode" 項目ID="法定管理義務商材区分" 属性="1" 属性チェック="0" />
+  <項目 ID="522" 項目名="unitMultiple" 項目ID="発注単位" 属性="1" 属性チェック="0" />
+  <項目 ID="523" 項目名="unitOfMeasure" 項目ID="発注単位コード" 属性="1" 属性チェック="0" />
+  <項目 ID="524" 項目名="quantity" 項目ID="発注数量（バラ）" 属性="1" 属性チェック="0" />
+  <項目 ID="525" 項目名="numOfOrderUnits" 項目ID="発注数量（発注単位数）" 属性="1" 属性チェック="0" />
+  <項目 ID="526" 項目名="quantity" 項目ID="出荷数量（バラ）" 属性="1" 属性チェック="0" />
+  <項目 ID="527" 項目名="numOfOrderUnits" 項目ID="出荷数量（発注単位数）" 属性="1" 属性チェック="0" />
+  <項目 ID="528" 項目名="unitNetPrice" 項目ID="原単価" 属性="1" 属性チェック="0" />
+  <項目 ID="529" 項目名="unitSellingPrice" 項目ID="売単価" 属性="1" 属性チェック="0" />
+  <項目 ID="530" 項目名="itfCode" 項目ID="ITFコード(集合包装GTIN)" 属性="1" 属性チェック="0" />
+  <項目 ID="531" 項目名="numOfItemsInPackage" 項目ID="ITF入数(集合包装GTIN入数)" 属性="1" 属性チェック="0" />
+  <項目 ID="532" 項目名="numOfPackages" 項目ID="出荷ケース数" 属性="1" 属性チェック="0" />
+  <項目 ID="533" 項目名="code" 項目ID="陳列場所コード" 属性="1" 属性チェック="0" />
+  <項目 ID="534" 項目名="name" 項目ID="陳列場所名称" 属性="1" 属性チェック="0" />
+  <項目 ID="535" 項目名="name_sbcs" 項目ID="陳列場所名称カナ" 属性="1" 属性チェック="0" />
+  <項目 ID="536" 項目名="campaignStartDate" 項目ID="販促開始日" 属性="1" 属性チェック="0" />
+  <項目 ID="537" 項目名="tradeNumber" 項目ID="取引番号（発注・返品）" 属性="1" 属性チェック="0" />
+  <項目 ID="538" 項目名="lineNumber" 項目ID="取引明細番号（発注・返品）" 属性="1" 属性チェック="0" />
+  <項目 ID="539" 項目名="orderDate" 項目ID="発注日" 属性="1" 属性チェック="0" />
+  <項目 ID="540" 項目名="deliveryDateToReceiver" 項目ID="最終納品先納品日" 属性="1" 属性チェック="0" />
+  <項目 ID="541" 項目名="gtin" 項目ID="商品コード（ＧTIN）" 属性="1" 属性チェック="0" />
+  <項目 ID="542" 項目名="orderItemCode" 項目ID="商品コード（発注用）" 属性="1" 属性チェック="0" />
+  <項目 ID="543" 項目名="codeType" 項目ID="商品コード区分" 属性="1" 属性チェック="0" />
+  <項目 ID="544" 項目名="supplierItemCode" 項目ID="商品コード（取引先）" 属性="1" 属性チェック="0" />
+  <項目 ID="545" 項目名="majorCategory" 項目ID="商品分類（大）" 属性="1" 属性チェック="0" />
+  <項目 ID="546" 項目名="subMajorCategory" 項目ID="商品分類（中）" 属性="1" 属性チェック="0" />
+  <項目 ID="547" 項目名="minorCategory" 項目ID="商品分類（小）" 属性="1" 属性チェック="0" />
+  <項目 ID="548" 項目名="detailedCategory" 項目ID="商品分類（細）" 属性="1" 属性チェック="0" />
+  <項目 ID="549" 項目名="sellByDate" 項目ID="賞味期限日" 属性="1" 属性チェック="0" />
+  <項目 ID="550" 項目名="productionDate" 項目ID="製造日" 属性="1" 属性チェック="0" />
+  <項目 ID="551" 項目名="lotNumber" 項目ID="製造番号" 属性="1" 属性チェック="0" />
+  <項目 ID="552" 項目名="goodsClassificationCode" 項目ID="商品区分" 属性="1" 属性チェック="0" />
+  <項目 ID="553" 項目名="orderClassificationCode" 項目ID="発注区分" 属性="1" 属性チェック="0" />
+  <項目 ID="554" 項目名="eosCode" 項目ID="EOS区分" 属性="1" 属性チェック="0" />
+  <項目 ID="555" 項目名="tradeTypeCode" 項目ID="処理種別" 属性="1" 属性チェック="0" />
+  <項目 ID="556" 項目名="statutoryClassificationCode" 項目ID="法定管理義務商材区分" 属性="1" 属性チェック="0" />
+  <項目 ID="557" 項目名="unitMultiple" 項目ID="発注単位" 属性="1" 属性チェック="0" />
+  <項目 ID="558" 項目名="unitOfMeasure" 項目ID="発注単位コード" 属性="1" 属性チェック="0" />
+  <項目 ID="559" 項目名="quantity" 項目ID="発注数量（バラ）" 属性="1" 属性チェック="0" />
+  <項目 ID="560" 項目名="numOfOrderUnits" 項目ID="発注数量（発注単位数）" 属性="1" 属性チェック="0" />
+  <項目 ID="561" 項目名="quantity" 項目ID="出荷数量（バラ）" 属性="1" 属性チェック="0" />
+  <項目 ID="562" 項目名="numOfOrderUnits" 項目ID="出荷数量（発注単位数）" 属性="1" 属性チェック="0" />
+  <項目 ID="563" 項目名="unitNetPrice" 項目ID="原単価" 属性="1" 属性チェック="0" />
+  <項目 ID="564" 項目名="unitSellingPrice" 項目ID="売単価" 属性="1" 属性チェック="0" />
+  <項目 ID="565" 項目名="quantity" 項目ID="欠品数量(バラ数)" 属性="1" 属性チェック="0" />
+  <項目 ID="566" 項目名="numOfOrderUnits" 項目ID="欠品数量(発注単位数)" 属性="1" 属性チェック="0" />
+  <項目 ID="567" 項目名="stockoutReasonCode" 項目ID="欠品区分" 属性="1" 属性チェック="0" />
+  <項目 ID="568" 項目名="tradeNumber" 項目ID="取引番号（発注・返品）" 属性="1" 属性チェック="0" />
+  <項目 ID="569" 項目名="lineNumber" 項目ID="取引明細番号（発注・返品）" 属性="1" 属性チェック="0" />
+  <項目 ID="570" 項目名="orderDate" 項目ID="発注日" 属性="1" 属性チェック="0" />
+  <項目 ID="571" 項目名="deliveryDateToReceiver" 項目ID="最終納品先納品日" 属性="1" 属性チェック="0" />
+  <項目 ID="572" 項目名="gtin" 項目ID="商品コード（ＧTIN）" 属性="1" 属性チェック="0" />
+  <項目 ID="573" 項目名="orderItemCode" 項目ID="商品コード（発注用）" 属性="1" 属性チェック="0" />
+  <項目 ID="574" 項目名="codeType" 項目ID="商品コード区分" 属性="1" 属性チェック="0" />
+  <項目 ID="575" 項目名="supplierItemCode" 項目ID="商品コード（取引先）" 属性="1" 属性チェック="0" />
+  <項目 ID="576" 項目名="majorCategory" 項目ID="商品分類（大）" 属性="1" 属性チェック="0" />
+  <項目 ID="577" 項目名="subMajorCategory" 項目ID="商品分類（中）" 属性="1" 属性チェック="0" />
+  <項目 ID="578" 項目名="minorCategory" 項目ID="商品分類（小）" 属性="1" 属性チェック="0" />
+  <項目 ID="579" 項目名="detailedCategory" 項目ID="商品分類（細）" 属性="1" 属性チェック="0" />
+  <項目 ID="580" 項目名="goodsClassificationCode" 項目ID="商品区分" 属性="1" 属性チェック="0" />
+  <項目 ID="581" 項目名="orderClassificationCode" 項目ID="発注区分" 属性="1" 属性チェック="0" />
+  <項目 ID="582" 項目名="eosCode" 項目ID="EOS区分" 属性="1" 属性チェック="0" />
+  <項目 ID="583" 項目名="tradeTypeCode" 項目ID="処理種別" 属性="1" 属性チェック="0" />
+  <項目 ID="584" 項目名="unitMultiple" 項目ID="発注単位" 属性="1" 属性チェック="0" />
+  <項目 ID="585" 項目名="unitOfMeasure" 項目ID="発注単位コード" 属性="1" 属性チェック="0" />
+  <項目 ID="586" 項目名="quantity" 項目ID="発注数量（バラ）" 属性="1" 属性チェック="0" />
+  <項目 ID="587" 項目名="numOfOrderUnits" 項目ID="発注数量（発注単位数）" 属性="1" 属性チェック="0" />
+  <項目 ID="588" 項目名="unitNetPrice" 項目ID="原単価" 属性="1" 属性チェック="0" />
+  <項目 ID="589" 項目名="unitSellingPrice" 項目ID="売単価" 属性="1" 属性チェック="0" />
+  <項目CSV ID="430" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="432" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="438" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="442" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="444" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="445" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="446" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="447" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="448" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="449" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="452" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="453" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="454" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="455" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="456" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="457" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="458" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="459" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="460" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="461" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="462" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="463" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="464" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="465" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="466" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="467" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="468" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="469" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="470" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="471" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="472" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="473" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="474" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="475" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="476" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="477" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="478" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="479" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="480" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="481" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="482" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="483" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="484" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="485" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="486" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="487" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="488" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="489" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="490" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="491" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="492" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="493" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="494" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="495" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="496" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="497" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="498" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="499" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="500" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="501" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="502" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="503" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="504" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="505" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="506" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="507" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="508" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="509" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="510" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="511" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="512" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="513" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="514" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="515" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="516" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="517" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="518" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="519" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="520" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="521" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="522" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="523" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="524" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="525" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="526" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="527" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="528" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="529" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="530" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="531" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="532" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="533" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="534" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="535" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="536" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="537" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="538" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="539" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="540" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="541" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="542" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="543" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="544" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="545" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="546" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="547" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="548" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="549" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="550" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="551" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="552" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="553" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="554" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="555" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="556" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="557" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="558" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="559" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="560" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="561" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="562" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="563" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="564" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="565" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="566" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="567" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="568" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="569" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="570" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="571" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="572" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="573" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="574" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="575" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="576" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="577" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="578" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="579" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="580" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="581" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="582" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="583" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="584" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="585" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="586" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="587" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="588" 桁数="0" 空白を削除する="False" />
+  <項目CSV ID="589" 桁数="0" 空白を削除する="False" />
+  <項目補助情報 ID="430" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="432" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="438" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="442" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="444" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="445" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="446" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="447" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="448" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="449" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="452" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="453" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="454" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="455" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="456" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="457" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="458" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="459" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="460" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="461" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="462" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="463" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="464" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="465" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="466" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="467" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="468" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="469" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="470" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="471" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="472" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="473" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="474" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="475" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="476" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="477" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="478" 全角="False" 大文字="False" 暦書式="yyyy-MM-dd" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="479" 全角="False" 大文字="False" 暦書式="yyyy-MM-dd" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="480" 全角="False" 大文字="False" 暦書式="yyyy-MM-dd" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="481" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="482" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="483" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="484" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="485" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="486" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="487" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="488" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="489" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="490" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="491" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="492" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="493" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="494" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="495" 全角="False" 大文字="False" 暦書式="yyyy-MM-dd" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="496" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="497" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="498" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="499" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="500" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="501" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="502" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="503" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="504" 全角="False" 大文字="False" 暦書式="yyyy-MM-dd" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="505" 全角="False" 大文字="False" 暦書式="yyyy-MM-dd" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="506" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="507" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="508" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="509" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="510" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="511" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="512" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="513" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="514" 全角="False" 大文字="False" 暦書式="yyyy-MM-dd" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="515" 全角="False" 大文字="False" 暦書式="yyyy-MM-dd" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="516" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="517" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="518" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="519" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="520" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="521" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="522" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="523" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="524" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="525" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="526" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="527" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="528" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="529" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="530" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="531" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="532" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="533" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="534" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="535" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="536" 全角="False" 大文字="False" 暦書式="yyyy-MM-dd" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="537" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="538" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="539" 全角="False" 大文字="False" 暦書式="yyyy-MM-dd" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="540" 全角="False" 大文字="False" 暦書式="yyyy-MM-dd" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="541" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="542" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="543" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="544" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="545" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="546" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="547" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="548" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="549" 全角="False" 大文字="False" 暦書式="yyyy-MM-dd" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="550" 全角="False" 大文字="False" 暦書式="yyyy-MM-dd" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="551" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="552" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="553" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="554" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="555" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="556" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="557" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="558" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="559" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="560" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="561" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="562" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="563" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="564" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="565" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="566" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="567" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="568" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="569" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="570" 全角="False" 大文字="False" 暦書式="yyyy-MM-dd" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="571" 全角="False" 大文字="False" 暦書式="yyyy-MM-dd" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="572" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="573" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="574" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="575" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="576" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="577" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="578" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="579" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="580" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="581" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="582" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="583" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="584" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="585" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="586" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="587" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="588" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="589" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+</マッピングレイアウト>

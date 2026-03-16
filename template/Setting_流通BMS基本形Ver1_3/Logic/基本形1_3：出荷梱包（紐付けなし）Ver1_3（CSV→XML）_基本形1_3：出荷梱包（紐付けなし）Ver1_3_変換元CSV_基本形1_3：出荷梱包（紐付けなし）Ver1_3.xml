@@ -1,0 +1,555 @@
+<?xml version="1.0" standalone="yes"?>
+<LogicInfo>
+  <xs:schema id="LogicInfo" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="LogicInfo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ロジック">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="ChildType" type="xs:string" />
+              <xs:attribute name="ChildID" type="xs:string" />
+              <xs:attribute name="表示インデックス" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="レコード接続">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="変換元レコードID" type="xs:string" />
+              <xs:attribute name="変換先レコードID" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="線引き">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="変換元項目ID" type="xs:string" />
+              <xs:attribute name="変換先項目ID" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ロジックパラメータ">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="ParentID" type="xs:string" />
+              <xs:attribute name="入出力" type="xs:string" />
+              <xs:attribute name="引数名" type="xs:string" />
+              <xs:attribute name="引数値" type="xs:string" />
+              <xs:attribute name="項目ID" type="xs:string" />
+              <xs:attribute name="初期値" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="CSVテーブル検索">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="ParentID" type="xs:string" />
+              <xs:attribute name="CSVファイル" type="xs:string" />
+              <xs:attribute name="中断する" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="DBテーブル検索">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="ParentID" type="xs:string" />
+              <xs:attribute name="接続文字列" type="xs:string" />
+              <xs:attribute name="テーブル" type="xs:string" />
+              <xs:attribute name="中断する" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="COMメソッド呼び出し">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="ParentID" type="xs:string" />
+              <xs:attribute name="モジュール" type="xs:string" />
+              <xs:attribute name="プログラムID" type="xs:string" />
+              <xs:attribute name="メソッド" type="xs:string" />
+              <xs:attribute name="引数" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="VBScript呼び出し">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="ParentID" type="xs:string" />
+              <xs:attribute name="スクリプト" type="xs:string" />
+              <xs:attribute name="関数" type="xs:string" />
+              <xs:attribute name="引数" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="パックゾーン入力">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="バイナリタイプ" type="xs:string" />
+              <xs:attribute name="符号付加" type="xs:string" />
+              <xs:attribute name="正符号省略" type="xs:string" />
+              <xs:attribute name="符号位置" type="xs:string" />
+              <xs:attribute name="バイナリ入力項目ID" type="xs:string" />
+              <xs:attribute name="数値出力項目ID" type="xs:string" />
+              <xs:attribute name="符号出力項目ID" type="xs:string" />
+              <xs:attribute name="小数部桁数" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="パックゾーン出力">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="バイナリタイプ" type="xs:string" />
+              <xs:attribute name="符号入力" type="xs:string" />
+              <xs:attribute name="正符号省略" type="xs:string" />
+              <xs:attribute name="数値入力項目ID" type="xs:string" />
+              <xs:attribute name="符号入力項目ID" type="xs:string" />
+              <xs:attribute name="バイナリ出力項目ID" type="xs:string" />
+              <xs:attribute name="小数部桁数" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="結合">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="変換元項目ID配列" type="xs:string" />
+              <xs:attribute name="変換先項目ID" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="文字列操作">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="ParentID" type="xs:string" />
+              <xs:attribute name="変換元項目ID" type="xs:string" />
+              <xs:attribute name="変換先項目ID" type="xs:string" />
+              <xs:attribute name="テスト文字列" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="文字列操作コマンド">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="ParentID" type="xs:string" />
+              <xs:attribute name="コマンド" type="xs:string" />
+              <xs:attribute name="パラメータ1" type="xs:string" />
+              <xs:attribute name="パラメータ2" type="xs:string" />
+              <xs:attribute name="パラメータ3" type="xs:string" />
+              <xs:attribute name="パラメータ4" type="xs:string" />
+              <xs:attribute name="パラメータ5" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="連番">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="変換先レコードID" type="xs:string" />
+              <xs:attribute name="変換先項目ID配列" type="xs:string" />
+              <xs:attribute name="初期値" type="xs:string" />
+              <xs:attribute name="増加量" type="xs:string" />
+              <xs:attribute name="レコード整形前" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="件数">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="変換先レコードID" type="xs:string" />
+              <xs:attribute name="変換先項目ID" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="合計">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="変換元項目ID" type="xs:string" />
+              <xs:attribute name="変換先項目ID" type="xs:string" />
+              <xs:attribute name="基準レコードID" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="CIIテーブル検索">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="ParentID" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="固定値">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="固定入力値" type="xs:string" />
+              <xs:attribute name="変換先項目ID" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ロジック" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="レコード接続_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//レコード接続" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="線引き_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//線引き" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="ロジックパラメータ_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ロジックパラメータ" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="CSVテーブル検索_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//CSVテーブル検索" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="DBテーブル検索_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//DBテーブル検索" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="COMメソッド呼び出し_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//COMメソッド呼び出し" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="VBScript呼び出し_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//VBScript呼び出し" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="パックゾーン入力_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//パックゾーン入力" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="パックゾーン出力_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//パックゾーン出力" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="結合_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//結合" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="文字列操作_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//文字列操作" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="文字列操作コマンド_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//文字列操作コマンド" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="連番_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//連番" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="件数_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//件数" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="合計_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//合計" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="CIIテーブル検索_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//CIIテーブル検索" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="固定値_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//固定値" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ロジック ID="313" ChildType="0" ChildID="17" 表示インデックス="0" />
+  <ロジック ID="314" ChildType="0" ChildID="18" 表示インデックス="0" />
+  <ロジック ID="315" ChildType="0" ChildID="19" 表示インデックス="0" />
+  <ロジック ID="316" ChildType="0" ChildID="20" 表示インデックス="0" />
+  <ロジック ID="321" ChildType="1" ChildID="297" 表示インデックス="0" />
+  <ロジック ID="322" ChildType="1" ChildID="298" 表示インデックス="0" />
+  <ロジック ID="323" ChildType="1" ChildID="299" 表示インデックス="0" />
+  <ロジック ID="324" ChildType="1" ChildID="300" 表示インデックス="0" />
+  <ロジック ID="325" ChildType="1" ChildID="301" 表示インデックス="0" />
+  <ロジック ID="326" ChildType="1" ChildID="302" 表示インデックス="0" />
+  <ロジック ID="327" ChildType="1" ChildID="303" 表示インデックス="0" />
+  <ロジック ID="328" ChildType="1" ChildID="304" 表示インデックス="0" />
+  <ロジック ID="329" ChildType="1" ChildID="305" 表示インデックス="0" />
+  <ロジック ID="330" ChildType="1" ChildID="306" 表示インデックス="0" />
+  <ロジック ID="331" ChildType="1" ChildID="307" 表示インデックス="0" />
+  <ロジック ID="332" ChildType="1" ChildID="308" 表示インデックス="0" />
+  <ロジック ID="333" ChildType="1" ChildID="309" 表示インデックス="0" />
+  <ロジック ID="334" ChildType="1" ChildID="310" 表示インデックス="0" />
+  <ロジック ID="335" ChildType="1" ChildID="311" 表示インデックス="0" />
+  <ロジック ID="336" ChildType="1" ChildID="312" 表示インデックス="0" />
+  <ロジック ID="337" ChildType="1" ChildID="313" 表示インデックス="0" />
+  <ロジック ID="338" ChildType="1" ChildID="314" 表示インデックス="0" />
+  <ロジック ID="339" ChildType="1" ChildID="315" 表示インデックス="0" />
+  <ロジック ID="340" ChildType="1" ChildID="316" 表示インデックス="0" />
+  <ロジック ID="341" ChildType="1" ChildID="317" 表示インデックス="0" />
+  <ロジック ID="342" ChildType="1" ChildID="318" 表示インデックス="0" />
+  <ロジック ID="343" ChildType="1" ChildID="319" 表示インデックス="0" />
+  <ロジック ID="344" ChildType="1" ChildID="320" 表示インデックス="0" />
+  <ロジック ID="345" ChildType="1" ChildID="321" 表示インデックス="0" />
+  <ロジック ID="346" ChildType="1" ChildID="322" 表示インデックス="0" />
+  <ロジック ID="347" ChildType="1" ChildID="323" 表示インデックス="0" />
+  <ロジック ID="348" ChildType="1" ChildID="324" 表示インデックス="0" />
+  <ロジック ID="349" ChildType="1" ChildID="325" 表示インデックス="0" />
+  <ロジック ID="350" ChildType="1" ChildID="326" 表示インデックス="0" />
+  <ロジック ID="351" ChildType="1" ChildID="327" 表示インデックス="0" />
+  <ロジック ID="352" ChildType="1" ChildID="328" 表示インデックス="0" />
+  <ロジック ID="353" ChildType="1" ChildID="329" 表示インデックス="0" />
+  <ロジック ID="354" ChildType="1" ChildID="330" 表示インデックス="0" />
+  <ロジック ID="355" ChildType="1" ChildID="331" 表示インデックス="0" />
+  <ロジック ID="356" ChildType="1" ChildID="332" 表示インデックス="0" />
+  <ロジック ID="357" ChildType="1" ChildID="333" 表示インデックス="0" />
+  <ロジック ID="358" ChildType="1" ChildID="334" 表示インデックス="0" />
+  <ロジック ID="359" ChildType="1" ChildID="335" 表示インデックス="0" />
+  <ロジック ID="360" ChildType="1" ChildID="336" 表示インデックス="0" />
+  <ロジック ID="361" ChildType="1" ChildID="337" 表示インデックス="0" />
+  <ロジック ID="362" ChildType="1" ChildID="338" 表示インデックス="0" />
+  <ロジック ID="363" ChildType="1" ChildID="339" 表示インデックス="0" />
+  <ロジック ID="364" ChildType="1" ChildID="340" 表示インデックス="0" />
+  <ロジック ID="365" ChildType="1" ChildID="341" 表示インデックス="0" />
+  <ロジック ID="366" ChildType="1" ChildID="342" 表示インデックス="0" />
+  <ロジック ID="367" ChildType="1" ChildID="343" 表示インデックス="0" />
+  <ロジック ID="368" ChildType="1" ChildID="344" 表示インデックス="0" />
+  <ロジック ID="369" ChildType="0" ChildID="25" 表示インデックス="0" />
+  <ロジック ID="370" ChildType="0" ChildID="26" 表示インデックス="0" />
+  <ロジック ID="371" ChildType="0" ChildID="27" 表示インデックス="0" />
+  <ロジック ID="372" ChildType="0" ChildID="28" 表示インデックス="0" />
+  <ロジック ID="373" ChildType="1" ChildID="345" 表示インデックス="0" />
+  <ロジック ID="374" ChildType="1" ChildID="346" 表示インデックス="0" />
+  <ロジック ID="375" ChildType="1" ChildID="347" 表示インデックス="0" />
+  <ロジック ID="376" ChildType="1" ChildID="348" 表示インデックス="0" />
+  <ロジック ID="377" ChildType="1" ChildID="349" 表示インデックス="0" />
+  <ロジック ID="378" ChildType="1" ChildID="350" 表示インデックス="0" />
+  <ロジック ID="379" ChildType="1" ChildID="351" 表示インデックス="0" />
+  <ロジック ID="380" ChildType="1" ChildID="352" 表示インデックス="0" />
+  <ロジック ID="381" ChildType="1" ChildID="353" 表示インデックス="0" />
+  <ロジック ID="382" ChildType="1" ChildID="354" 表示インデックス="0" />
+  <ロジック ID="383" ChildType="1" ChildID="355" 表示インデックス="0" />
+  <ロジック ID="384" ChildType="1" ChildID="356" 表示インデックス="0" />
+  <ロジック ID="385" ChildType="1" ChildID="357" 表示インデックス="0" />
+  <ロジック ID="386" ChildType="1" ChildID="358" 表示インデックス="0" />
+  <ロジック ID="387" ChildType="1" ChildID="359" 表示インデックス="0" />
+  <ロジック ID="388" ChildType="1" ChildID="360" 表示インデックス="0" />
+  <ロジック ID="389" ChildType="1" ChildID="361" 表示インデックス="0" />
+  <ロジック ID="390" ChildType="1" ChildID="362" 表示インデックス="0" />
+  <ロジック ID="391" ChildType="1" ChildID="363" 表示インデックス="0" />
+  <ロジック ID="392" ChildType="1" ChildID="364" 表示インデックス="0" />
+  <ロジック ID="393" ChildType="1" ChildID="365" 表示インデックス="0" />
+  <ロジック ID="394" ChildType="1" ChildID="366" 表示インデックス="0" />
+  <ロジック ID="395" ChildType="1" ChildID="367" 表示インデックス="0" />
+  <ロジック ID="396" ChildType="1" ChildID="368" 表示インデックス="0" />
+  <ロジック ID="397" ChildType="1" ChildID="369" 表示インデックス="0" />
+  <ロジック ID="398" ChildType="1" ChildID="370" 表示インデックス="0" />
+  <ロジック ID="399" ChildType="1" ChildID="371" 表示インデックス="0" />
+  <ロジック ID="400" ChildType="1" ChildID="372" 表示インデックス="0" />
+  <ロジック ID="401" ChildType="1" ChildID="373" 表示インデックス="0" />
+  <ロジック ID="402" ChildType="1" ChildID="374" 表示インデックス="0" />
+  <ロジック ID="403" ChildType="1" ChildID="375" 表示インデックス="0" />
+  <ロジック ID="404" ChildType="1" ChildID="376" 表示インデックス="0" />
+  <ロジック ID="405" ChildType="1" ChildID="377" 表示インデックス="0" />
+  <ロジック ID="406" ChildType="1" ChildID="378" 表示インデックス="0" />
+  <ロジック ID="407" ChildType="1" ChildID="379" 表示インデックス="0" />
+  <ロジック ID="408" ChildType="1" ChildID="380" 表示インデックス="0" />
+  <ロジック ID="409" ChildType="1" ChildID="381" 表示インデックス="0" />
+  <ロジック ID="410" ChildType="1" ChildID="382" 表示インデックス="0" />
+  <ロジック ID="411" ChildType="1" ChildID="383" 表示インデックス="0" />
+  <ロジック ID="412" ChildType="1" ChildID="384" 表示インデックス="0" />
+  <ロジック ID="413" ChildType="1" ChildID="385" 表示インデックス="0" />
+  <ロジック ID="414" ChildType="1" ChildID="386" 表示インデックス="0" />
+  <ロジック ID="415" ChildType="1" ChildID="387" 表示インデックス="0" />
+  <ロジック ID="416" ChildType="1" ChildID="388" 表示インデックス="0" />
+  <ロジック ID="418" ChildType="1" ChildID="390" 表示インデックス="0" />
+  <ロジック ID="419" ChildType="1" ChildID="391" 表示インデックス="0" />
+  <ロジック ID="420" ChildType="1" ChildID="392" 表示インデックス="0" />
+  <ロジック ID="421" ChildType="1" ChildID="393" 表示インデックス="0" />
+  <ロジック ID="422" ChildType="1" ChildID="394" 表示インデックス="0" />
+  <ロジック ID="423" ChildType="1" ChildID="395" 表示インデックス="0" />
+  <ロジック ID="424" ChildType="1" ChildID="396" 表示インデックス="0" />
+  <ロジック ID="425" ChildType="1" ChildID="397" 表示インデックス="0" />
+  <ロジック ID="426" ChildType="1" ChildID="398" 表示インデックス="0" />
+  <ロジック ID="427" ChildType="1" ChildID="399" 表示インデックス="0" />
+  <ロジック ID="428" ChildType="1" ChildID="400" 表示インデックス="0" />
+  <ロジック ID="429" ChildType="1" ChildID="401" 表示インデックス="0" />
+  <ロジック ID="430" ChildType="1" ChildID="402" 表示インデックス="0" />
+  <ロジック ID="431" ChildType="1" ChildID="403" 表示インデックス="0" />
+  <ロジック ID="432" ChildType="1" ChildID="404" 表示インデックス="0" />
+  <ロジック ID="433" ChildType="1" ChildID="405" 表示インデックス="0" />
+  <ロジック ID="434" ChildType="1" ChildID="406" 表示インデックス="0" />
+  <ロジック ID="435" ChildType="1" ChildID="407" 表示インデックス="0" />
+  <ロジック ID="436" ChildType="1" ChildID="408" 表示インデックス="0" />
+  <ロジック ID="437" ChildType="1" ChildID="409" 表示インデックス="0" />
+  <ロジック ID="438" ChildType="1" ChildID="410" 表示インデックス="0" />
+  <ロジック ID="439" ChildType="1" ChildID="411" 表示インデックス="0" />
+  <ロジック ID="440" ChildType="1" ChildID="412" 表示インデックス="0" />
+  <ロジック ID="441" ChildType="1" ChildID="413" 表示インデックス="0" />
+  <ロジック ID="442" ChildType="1" ChildID="414" 表示インデックス="0" />
+  <ロジック ID="443" ChildType="1" ChildID="415" 表示インデックス="0" />
+  <ロジック ID="444" ChildType="1" ChildID="416" 表示インデックス="0" />
+  <ロジック ID="445" ChildType="1" ChildID="417" 表示インデックス="0" />
+  <ロジック ID="446" ChildType="1" ChildID="418" 表示インデックス="0" />
+  <ロジック ID="447" ChildType="1" ChildID="419" 表示インデックス="0" />
+  <ロジック ID="448" ChildType="1" ChildID="420" 表示インデックス="0" />
+  <ロジック ID="449" ChildType="1" ChildID="421" 表示インデックス="0" />
+  <ロジック ID="450" ChildType="1" ChildID="422" 表示インデックス="0" />
+  <ロジック ID="451" ChildType="1" ChildID="423" 表示インデックス="0" />
+  <ロジック ID="452" ChildType="1" ChildID="424" 表示インデックス="0" />
+  <ロジック ID="453" ChildType="1" ChildID="425" 表示インデックス="0" />
+  <ロジック ID="454" ChildType="1" ChildID="426" 表示インデックス="0" />
+  <ロジック ID="455" ChildType="1" ChildID="427" 表示インデックス="0" />
+  <ロジック ID="456" ChildType="1" ChildID="428" 表示インデックス="0" />
+  <ロジック ID="457" ChildType="1" ChildID="429" 表示インデックス="0" />
+  <ロジック ID="458" ChildType="1" ChildID="430" 表示インデックス="0" />
+  <ロジック ID="459" ChildType="1" ChildID="431" 表示インデックス="0" />
+  <ロジック ID="460" ChildType="1" ChildID="432" 表示インデックス="0" />
+  <ロジック ID="461" ChildType="1" ChildID="433" 表示インデックス="0" />
+  <ロジック ID="462" ChildType="1" ChildID="434" 表示インデックス="0" />
+  <ロジック ID="463" ChildType="1" ChildID="435" 表示インデックス="0" />
+  <ロジック ID="464" ChildType="1" ChildID="436" 表示インデックス="0" />
+  <ロジック ID="465" ChildType="1" ChildID="437" 表示インデックス="0" />
+  <ロジック ID="466" ChildType="1" ChildID="438" 表示インデックス="0" />
+  <ロジック ID="467" ChildType="1" ChildID="439" 表示インデックス="0" />
+  <ロジック ID="468" ChildType="1" ChildID="440" 表示インデックス="0" />
+  <ロジック ID="469" ChildType="1" ChildID="441" 表示インデックス="0" />
+  <ロジック ID="470" ChildType="1" ChildID="442" 表示インデックス="0" />
+  <ロジック ID="471" ChildType="1" ChildID="443" 表示インデックス="0" />
+  <ロジック ID="472" ChildType="1" ChildID="444" 表示インデックス="0" />
+  <ロジック ID="473" ChildType="1" ChildID="445" 表示インデックス="0" />
+  <レコード接続 ID="17" 変換元レコードID="439" 変換先レコードID="2" />
+  <レコード接続 ID="18" 変換元レコードID="439" 変換先レコードID="24" />
+  <レコード接続 ID="19" 変換元レコードID="439" 変換先レコードID="35" />
+  <レコード接続 ID="20" 変換元レコードID="439" 変換先レコードID="82" />
+  <レコード接続 ID="25" 変換元レコードID="439" 変換先レコードID="94" />
+  <レコード接続 ID="26" 変換元レコードID="439" 変換先レコードID="110" />
+  <レコード接続 ID="27" 変換元レコードID="439" 変換先レコードID="162" />
+  <レコード接続 ID="28" 変換元レコードID="439" 変換先レコードID="224" />
+  <線引き ID="297" 変換元項目ID="441" 変換先項目ID="5" />
+  <線引き ID="298" 変換元項目ID="443" 変換先項目ID="9" />
+  <線引き ID="299" 変換元項目ID="449" 変換先項目ID="17" />
+  <線引き ID="300" 変換元項目ID="453" 変換先項目ID="23" />
+  <線引き ID="301" 変換元項目ID="455" 変換先項目ID="28" />
+  <線引き ID="302" 変換元項目ID="456" 変換先項目ID="29" />
+  <線引き ID="303" 変換元項目ID="457" 変換先項目ID="30" />
+  <線引き ID="304" 変換元項目ID="458" 変換先項目ID="31" />
+  <線引き ID="305" 変換元項目ID="459" 変換先項目ID="33" />
+  <線引き ID="306" 変換元項目ID="460" 変換先項目ID="34" />
+  <線引き ID="307" 変換元項目ID="463" 変換先項目ID="41" />
+  <線引き ID="308" 変換元項目ID="464" 変換先項目ID="42" />
+  <線引き ID="309" 変換元項目ID="465" 変換先項目ID="45" />
+  <線引き ID="310" 変換元項目ID="466" 変換先項目ID="46" />
+  <線引き ID="311" 変換元項目ID="467" 変換先項目ID="47" />
+  <線引き ID="312" 変換元項目ID="468" 変換先項目ID="48" />
+  <線引き ID="313" 変換元項目ID="469" 変換先項目ID="50" />
+  <線引き ID="314" 変換元項目ID="470" 変換先項目ID="51" />
+  <線引き ID="315" 変換元項目ID="471" 変換先項目ID="52" />
+  <線引き ID="316" 変換元項目ID="472" 変換先項目ID="53" />
+  <線引き ID="317" 変換元項目ID="473" 変換先項目ID="54" />
+  <線引き ID="318" 変換元項目ID="474" 変換先項目ID="55" />
+  <線引き ID="319" 変換元項目ID="475" 変換先項目ID="57" />
+  <線引き ID="320" 変換元項目ID="476" 変換先項目ID="58" />
+  <線引き ID="321" 変換元項目ID="477" 変換先項目ID="59" />
+  <線引き ID="322" 変換元項目ID="478" 変換先項目ID="60" />
+  <線引き ID="323" 変換元項目ID="479" 変換先項目ID="64" />
+  <線引き ID="324" 変換元項目ID="480" 変換先項目ID="66" />
+  <線引き ID="325" 変換元項目ID="481" 変換先項目ID="67" />
+  <線引き ID="326" 変換元項目ID="482" 変換先項目ID="68" />
+  <線引き ID="327" 変換元項目ID="483" 変換先項目ID="69" />
+  <線引き ID="328" 変換元項目ID="484" 変換先項目ID="71" />
+  <線引き ID="329" 変換元項目ID="485" 変換先項目ID="72" />
+  <線引き ID="330" 変換元項目ID="486" 変換先項目ID="73" />
+  <線引き ID="331" 変換元項目ID="487" 変換先項目ID="74" />
+  <線引き ID="332" 変換元項目ID="488" 変換先項目ID="75" />
+  <線引き ID="333" 変換元項目ID="489" 変換先項目ID="78" />
+  <線引き ID="334" 変換元項目ID="490" 変換先項目ID="79" />
+  <線引き ID="335" 変換元項目ID="491" 変換先項目ID="80" />
+  <線引き ID="336" 変換元項目ID="492" 変換先項目ID="84" />
+  <線引き ID="337" 変換元項目ID="493" 変換先項目ID="85" />
+  <線引き ID="338" 変換元項目ID="494" 変換先項目ID="86" />
+  <線引き ID="339" 変換元項目ID="495" 変換先項目ID="87" />
+  <線引き ID="340" 変換元項目ID="496" 変換先項目ID="89" />
+  <線引き ID="341" 変換元項目ID="497" 変換先項目ID="90" />
+  <線引き ID="342" 変換元項目ID="498" 変換先項目ID="91" />
+  <線引き ID="343" 変換元項目ID="499" 変換先項目ID="92" />
+  <線引き ID="344" 変換元項目ID="500" 変換先項目ID="93" />
+  <線引き ID="345" 変換元項目ID="501" 変換先項目ID="95" />
+  <線引き ID="346" 変換元項目ID="502" 変換先項目ID="96" />
+  <線引き ID="347" 変換元項目ID="503" 変換先項目ID="98" />
+  <線引き ID="348" 変換元項目ID="504" 変換先項目ID="99" />
+  <線引き ID="349" 変換元項目ID="505" 変換先項目ID="100" />
+  <線引き ID="350" 変換元項目ID="507" 変換先項目ID="103" />
+  <線引き ID="351" 変換元項目ID="506" 変換先項目ID="101" />
+  <線引き ID="352" 変換元項目ID="508" 変換先項目ID="104" />
+  <線引き ID="353" 変換元項目ID="509" 変換先項目ID="105" />
+  <線引き ID="354" 変換元項目ID="510" 変換先項目ID="106" />
+  <線引き ID="355" 変換元項目ID="511" 変換先項目ID="107" />
+  <線引き ID="356" 変換元項目ID="512" 変換先項目ID="108" />
+  <線引き ID="357" 変換元項目ID="513" 変換先項目ID="112" />
+  <線引き ID="358" 変換元項目ID="514" 変換先項目ID="113" />
+  <線引き ID="359" 変換元項目ID="515" 変換先項目ID="115" />
+  <線引き ID="360" 変換元項目ID="516" 変換先項目ID="116" />
+  <線引き ID="361" 変換元項目ID="517" 変換先項目ID="118" />
+  <線引き ID="362" 変換元項目ID="518" 変換先項目ID="119" />
+  <線引き ID="363" 変換元項目ID="519" 変換先項目ID="121" />
+  <線引き ID="364" 変換元項目ID="520" 変換先項目ID="122" />
+  <線引き ID="365" 変換元項目ID="521" 変換先項目ID="125" />
+  <線引き ID="366" 変換元項目ID="522" 変換先項目ID="126" />
+  <線引き ID="367" 変換元項目ID="523" 変換先項目ID="127" />
+  <線引き ID="368" 変換元項目ID="524" 変換先項目ID="128" />
+  <線引き ID="369" 変換元項目ID="525" 変換先項目ID="131" />
+  <線引き ID="370" 変換元項目ID="526" 変換先項目ID="132" />
+  <線引き ID="371" 変換元項目ID="527" 変換先項目ID="133" />
+  <線引き ID="372" 変換元項目ID="528" 変換先項目ID="136" />
+  <線引き ID="373" 変換元項目ID="529" 変換先項目ID="137" />
+  <線引き ID="374" 変換元項目ID="530" 変換先項目ID="138" />
+  <線引き ID="375" 変換元項目ID="531" 変換先項目ID="139" />
+  <線引き ID="376" 変換元項目ID="532" 変換先項目ID="142" />
+  <線引き ID="377" 変換元項目ID="533" 変換先項目ID="144" />
+  <線引き ID="378" 変換元項目ID="534" 変換先項目ID="145" />
+  <線引き ID="379" 変換元項目ID="535" 変換先項目ID="147" />
+  <線引き ID="380" 変換元項目ID="536" 変換先項目ID="148" />
+  <線引き ID="381" 変換元項目ID="537" 変換先項目ID="151" />
+  <線引き ID="382" 変換元項目ID="538" 変換先項目ID="152" />
+  <線引き ID="383" 変換元項目ID="539" 変換先項目ID="157" />
+  <線引き ID="384" 変換元項目ID="540" 変換先項目ID="159" />
+  <線引き ID="385" 変換元項目ID="541" 変換先項目ID="163" />
+  <線引き ID="386" 変換元項目ID="542" 変換先項目ID="164" />
+  <線引き ID="387" 変換元項目ID="543" 変換先項目ID="165" />
+  <線引き ID="388" 変換元項目ID="544" 変換先項目ID="167" />
+  <線引き ID="390" 変換元項目ID="545" 変換先項目ID="168" />
+  <線引き ID="391" 変換元項目ID="546" 変換先項目ID="169" />
+  <線引き ID="392" 変換元項目ID="547" 変換先項目ID="170" />
+  <線引き ID="393" 変換元項目ID="548" 変換先項目ID="173" />
+  <線引き ID="394" 変換元項目ID="549" 変換先項目ID="174" />
+  <線引き ID="395" 変換元項目ID="550" 変換先項目ID="176" />
+  <線引き ID="396" 変換元項目ID="551" 変換先項目ID="177" />
+  <線引き ID="397" 変換元項目ID="552" 変換先項目ID="179" />
+  <線引き ID="398" 変換元項目ID="553" 変換先項目ID="180" />
+  <線引き ID="399" 変換元項目ID="554" 変換先項目ID="182" />
+  <線引き ID="400" 変換元項目ID="555" 変換先項目ID="183" />
+  <線引き ID="401" 変換元項目ID="556" 変換先項目ID="186" />
+  <線引き ID="402" 変換元項目ID="557" 変換先項目ID="187" />
+  <線引き ID="403" 変換元項目ID="558" 変換先項目ID="188" />
+  <線引き ID="404" 変換元項目ID="559" 変換先項目ID="189" />
+  <線引き ID="405" 変換元項目ID="560" 変換先項目ID="192" />
+  <線引き ID="406" 変換元項目ID="561" 変換先項目ID="193" />
+  <線引き ID="407" 変換元項目ID="562" 変換先項目ID="194" />
+  <線引き ID="408" 変換元項目ID="563" 変換先項目ID="197" />
+  <線引き ID="409" 変換元項目ID="564" 変換先項目ID="198" />
+  <線引き ID="410" 変換元項目ID="565" 変換先項目ID="199" />
+  <線引き ID="411" 変換元項目ID="566" 変換先項目ID="200" />
+  <線引き ID="412" 変換元項目ID="567" 変換先項目ID="203" />
+  <線引き ID="413" 変換元項目ID="568" 変換先項目ID="205" />
+  <線引き ID="414" 変換元項目ID="569" 変換先項目ID="206" />
+  <線引き ID="415" 変換元項目ID="570" 変換先項目ID="208" />
+  <線引き ID="416" 変換元項目ID="571" 変換先項目ID="209" />
+  <線引き ID="417" 変換元項目ID="572" 変換先項目ID="212" />
+  <線引き ID="418" 変換元項目ID="573" 変換先項目ID="213" />
+  <線引き ID="419" 変換元項目ID="574" 変換先項目ID="218" />
+  <線引き ID="420" 変換元項目ID="575" 変換先項目ID="220" />
+  <線引き ID="421" 変換元項目ID="576" 変換先項目ID="225" />
+  <線引き ID="422" 変換元項目ID="577" 変換先項目ID="226" />
+  <線引き ID="423" 変換元項目ID="578" 変換先項目ID="227" />
+  <線引き ID="424" 変換元項目ID="579" 変換先項目ID="230" />
+  <線引き ID="425" 変換元項目ID="580" 変換先項目ID="231" />
+  <線引き ID="426" 変換元項目ID="581" 変換先項目ID="233" />
+  <線引き ID="427" 変換元項目ID="582" 変換先項目ID="234" />
+  <線引き ID="428" 変換元項目ID="583" 変換先項目ID="236" />
+  <線引き ID="429" 変換元項目ID="584" 変換先項目ID="237" />
+  <線引き ID="430" 変換元項目ID="585" 変換先項目ID="239" />
+  <線引き ID="431" 変換元項目ID="586" 変換先項目ID="240" />
+  <線引き ID="432" 変換元項目ID="587" 変換先項目ID="243" />
+  <線引き ID="433" 変換元項目ID="588" 変換先項目ID="244" />
+  <線引き ID="434" 変換元項目ID="589" 変換先項目ID="245" />
+  <線引き ID="435" 変換元項目ID="590" 変換先項目ID="246" />
+  <線引き ID="436" 変換元項目ID="591" 変換先項目ID="249" />
+  <線引き ID="437" 変換元項目ID="592" 変換先項目ID="250" />
+  <線引き ID="438" 変換元項目ID="593" 変換先項目ID="251" />
+  <線引き ID="439" 変換元項目ID="594" 変換先項目ID="252" />
+  <線引き ID="440" 変換元項目ID="595" 変換先項目ID="255" />
+  <線引き ID="441" 変換元項目ID="596" 変換先項目ID="256" />
+  <線引き ID="442" 変換元項目ID="597" 変換先項目ID="258" />
+  <線引き ID="443" 変換元項目ID="598" 変換先項目ID="259" />
+  <線引き ID="444" 変換元項目ID="599" 変換先項目ID="264" />
+  <線引き ID="445" 変換元項目ID="600" 変換先項目ID="266" />
+</LogicInfo>

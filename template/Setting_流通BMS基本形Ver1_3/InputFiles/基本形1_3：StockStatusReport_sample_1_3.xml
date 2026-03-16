@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<sh:StandardBusinessDocument xmlns:common="urn:SecondGenEDI:common:Japan:1" xmlns:stock="urn:SecondGenEDI:stock:Japan:1" xmlns:sh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                             xsi:schemaLocation="urn:SecondGenEDI:common:Japan:1 ../Schemas/SGE_StockStatusReportProxy1_3.xsd http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader ../Schemas/sbdh/StandardBusinessDocumentHeader.xsd">
+	<sh:StandardBusinessDocumentHeader>
+		<sh:HeaderVersion>1.3</sh:HeaderVersion>
+		<sh:Sender>
+			<sh:Identifier Authority="GLN">4902020000022</sh:Identifier>
+		</sh:Sender>
+		<sh:Receiver>
+			<sh:Identifier Authority="GLN">4556650000661</sh:Identifier>
+		</sh:Receiver>
+		<sh:DocumentIdentification>
+			<sh:Standard>SecondGenEDI</sh:Standard>
+			<sh:TypeVersion>1P</sh:TypeVersion>
+			<sh:InstanceIdentifier>1234567890</sh:InstanceIdentifier>
+			<sh:Type>Stock Status Report</sh:Type>
+			<sh:CreationDateAndTime>2009-12-03T12:00:00</sh:CreationDateAndTime>
+		</sh:DocumentIdentification>
+		<sh:BusinessScope>
+			<sh:Scope>
+				<sh:Type>Communication</sh:Type>
+				<sh:InstanceIdentifier>Test</sh:InstanceIdentifier>
+				<sh:Identifier>1</sh:Identifier>
+			</sh:Scope>
+		</sh:BusinessScope>
+	</sh:StandardBusinessDocumentHeader>
+	<common:message>
+		<entityIdentification>
+			<uniqueCreatorIdentification>MSG-1234567890</uniqueCreatorIdentification>
+		</entityIdentification>
+		<messageInfo>
+			<numberOfTradingDocuments>1</numberOfTradingDocuments>
+		</messageInfo>
+		<stock:listOfStockStatusReports>
+			<contentVersion>
+				<version>1.3</version>
+			</contentVersion>
+			<documentStructureVersion>
+				<version>1.3</version>
+			</documentStructureVersion>
+			<seller>
+				<code>677777</code>
+				<gln>4556650000661</gln>
+				<name>（株）インターコム食品</name>
+				<name_sbcs>ｲﾝﾀｰｺﾑｼｮｸﾋﾝ</name_sbcs>
+			</seller>
+			<stockStatusReport>
+				<buyer>
+					<code>01</code>
+					<gln>4902020000022</gln>
+					<name>（株）スーパーインターコム</name>
+					<name_sbcs>ｽｰﾊﾟｰｲﾝﾀｰｺﾑ</name_sbcs>
+				</buyer>
+				<center>
+					<code>12345</code>
+					<gln>4999200000017</gln>
+					<name>（株)在庫センタ</name>
+					<name_sbcs>ｻﾞｲｺｾﾝﾀ</name_sbcs>
+				</center>
+				<classification>
+					<reportIntervalCode>02</reportIntervalCode>
+					<closeDate>2009-12-30</closeDate>
+					<closeTime>17:00:00</closeTime>
+				</classification>
+				<lineItem>
+					<itemID>
+						<gtin>04988675772506</gtin>
+						<orderItemCode codeType="005">4988675772506</orderItemCode>
+						<supplierItemCode>112233</supplierItemCode>
+						<name>Ｂｉｗａｒｅ３２／Ｊ－ＳＰＡ４</name>
+						<name_sbcs>Biware32/J-SPA4</name_sbcs>
+					</itemID>
+					<goodsCategory>
+						<majorCategory>510</majorCategory>
+						<subMajorCategory>001</subMajorCategory>
+					</goodsCategory>
+					<outboundPreventionCode>
+						<code>01</code>
+					</outboundPreventionCode>
+					<masterInformation>
+						<conformingGoods>
+							<quantity>1000.1</quantity>
+							<sortByCategory>
+								<standardGoods>1000.1</standardGoods>
+							</sortByCategory>
+							<earliestExpirationDate>
+								<sellByDate>2009-12-21</sellByDate>
+								<quantity>1000.1</quantity>
+							</earliestExpirationDate>
+							<sortByExpirationDate>
+								<quantity>1000.1</quantity>
+							</sortByExpirationDate>
+						</conformingGoods>
+						<defectiveGoods>
+							<quantity>0.0</quantity>
+						</defectiveGoods>
+						<varianceQuantity>
+							<quantity plusMinus="+">0.0</quantity>
+						</varianceQuantity>
+					</masterInformation>
+					<transactionInformation>
+						<quantities>
+							<stockedQuantity>
+								<quantity plusMinus="+">200.0</quantity>
+							</stockedQuantity>
+							<deliveredQuantity>
+								<quantity plusMinus="+">200.0</quantity>
+							</deliveredQuantity>
+							<correctionQuantity>
+								<quantity plusMinus="-">123.5</quantity>
+							</correctionQuantity>
+							<callingbackQuantity>
+								<quantity plusMinus="+">0</quantity>
+							</callingbackQuantity>
+							<damagedQuantity>
+								<quantity plusMinus="-">555</quantity>
+							</damagedQuantity>
+							<varianceQuantity>
+								<quantity plusMinus="+">444</quantity>
+							</varianceQuantity>
+						</quantities>
+						<goodsTransfer>
+							<sourceCode>01</sourceCode>
+							<destination>
+								<destinationCode>02</destinationCode>
+								<transferedQuantity>
+									<quantity plusMinus="+">200.0</quantity>
+								</transferedQuantity>
+							</destination>
+						</goodsTransfer>
+					</transactionInformation>
+					<configurations>
+						<value>1212</value>
+					</configurations>
+				</lineItem>
+				<lineItem>
+					<itemID>
+						<gtin>04988675774227</gtin>
+						<orderItemCode codeType="005">4988675774227</orderItemCode>
+						<supplierItemCode>445566</supplierItemCode>
+						<name>Ｂｉｗａｒｅ　ＥＤＩ　Ａｓｓｉｓｔ</name>
+						<name_sbcs>Biware EDI Assist</name_sbcs>
+					</itemID>
+					<goodsCategory>
+						<majorCategory>510</majorCategory>
+						<subMajorCategory>001</subMajorCategory>
+						<minorCategory>123</minorCategory>
+						<detailedCategory>456</detailedCategory>
+					</goodsCategory>
+					<outboundPreventionCode>
+						<code>01</code>
+					</outboundPreventionCode>
+					<masterInformation>
+						<conformingGoods>
+							<quantity>2000.1</quantity>
+							<sortByCategory>
+								<standardGoods>2000.1</standardGoods>
+							</sortByCategory>
+							<earliestExpirationDate>
+								<sellByDate>2009-12-22</sellByDate>
+								<quantity>2000.1</quantity>
+							</earliestExpirationDate>
+							<sortByExpirationDate>
+								<sellByDate>2009-12-23</sellByDate>
+								<quantity>1000.1</quantity>
+							</sortByExpirationDate>
+							<sortByExpirationDate>
+								<sellByDate>2009-12-24</sellByDate>
+								<quantity>1000.0</quantity>
+							</sortByExpirationDate>
+						</conformingGoods>
+						<defectiveGoods>
+							<quantity>0.0</quantity>
+						</defectiveGoods>
+						<varianceQuantity>
+							<quantity plusMinus="+">0.0</quantity>
+						</varianceQuantity>
+					</masterInformation>
+					<transactionInformation>
+						<quantities>
+							<stockedQuantity>
+								<quantity plusMinus="+">300.0</quantity>
+							</stockedQuantity>
+							<deliveredQuantity>
+								<quantity plusMinus="+">300.0</quantity>
+							</deliveredQuantity>
+						</quantities>
+						<goodsTransfer>
+							<sourceCode>01</sourceCode>
+							<destination>
+								<destinationCode>02</destinationCode>
+								<transferedQuantity>
+									<quantity plusMinus="+">300.0</quantity>
+								</transferedQuantity>
+							</destination>
+						</goodsTransfer>
+						<goodsTransfer>
+							<sourceCode>10</sourceCode>
+							<destination>
+								<destinationCode>02</destinationCode>
+								<transferedQuantity>
+									<quantity plusMinus="+">400.0</quantity>
+								</transferedQuantity>
+							</destination>
+							<destination>
+								<destinationCode>03</destinationCode>
+								<transferedQuantity>
+									<quantity plusMinus="+">500.0</quantity>
+								</transferedQuantity>
+							</destination>
+						</goodsTransfer>
+					</transactionInformation>
+					<configurations>
+						<value>11111</value>
+						<value>22222</value>
+					</configurations>
+				</lineItem>
+			</stockStatusReport>
+		</stock:listOfStockStatusReports>
+	</common:message>
+</sh:StandardBusinessDocument>

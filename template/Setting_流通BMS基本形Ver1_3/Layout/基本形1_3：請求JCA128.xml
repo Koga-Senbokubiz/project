@@ -1,0 +1,457 @@
+<?xml version="1.0" standalone="yes"?>
+<マッピングレイアウト>
+  <xs:schema id="マッピングレイアウト" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="マッピングレイアウト" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="レイアウト">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="Name" type="xs:string" />
+              <xs:attribute name="Type" type="xs:int" />
+              <xs:attribute name="PropertyID" type="xs:int" />
+              <xs:attribute name="ParentsID" type="xs:int" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="データストア">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="データストア名" type="xs:string" />
+              <xs:attribute name="フォーマット" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="データストアFixed">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="レコード判別" type="xs:string" />
+              <xs:attribute name="EOF挿入" type="xs:string" />
+              <xs:attribute name="レコードセパレータフラグ" type="xs:string" />
+              <xs:attribute name="レコードセパレータコード" type="xs:string" />
+              <xs:attribute name="ゼロ出力" type="xs:string" />
+              <xs:attribute name="小数部フォーマット" type="xs:string" />
+              <xs:attribute name="桁あふれ" type="xs:string" />
+              <xs:attribute name="不明レコードスキップ" type="xs:string" />
+              <xs:attribute name="スキップサイズ" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="レコードグループ">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="レコードグループ名" type="xs:string" />
+              <xs:attribute name="レコードグループの繰り返し回数" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="レコード">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="レコード名" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="レコードFixed">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="区分値" type="xs:string" />
+              <xs:attribute name="開始桁" type="xs:string" />
+              <xs:attribute name="桁数" type="xs:string" />
+              <xs:attribute name="文字コード" type="xs:string" />
+              <xs:attribute name="属性" type="xs:string" />
+              <xs:attribute name="位置" type="xs:string" />
+              <xs:attribute name="パディング" type="xs:string" />
+              <xs:attribute name="SISO" type="xs:string" />
+              <xs:attribute name="EBCDICコードタイプ" type="xs:string" />
+              <xs:attribute name="JEF_KEIS漢字コードタイプ" type="xs:string" />
+              <xs:attribute name="レコード数" type="xs:string" />
+              <xs:attribute name="外字使用" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="項目グループ">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="項目グループ名" type="xs:string" />
+              <xs:attribute name="項目グループの繰り返し回数" type="xs:string" />
+              <xs:attribute name="項目グループ種別" type="xs:string" />
+              <xs:attribute name="必須" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="項目">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="項目名" type="xs:string" />
+              <xs:attribute name="項目ID" type="xs:string" />
+              <xs:attribute name="属性" type="xs:string" />
+              <xs:attribute name="属性チェック" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="項目Fixed">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="文字コード" type="xs:string" />
+              <xs:attribute name="桁数" type="xs:string" />
+              <xs:attribute name="小数部桁数" type="xs:string" />
+              <xs:attribute name="位置" type="xs:string" />
+              <xs:attribute name="パディング" type="xs:string" />
+              <xs:attribute name="変換エラー" type="xs:string" />
+              <xs:attribute name="置換コード" type="xs:string" />
+              <xs:attribute name="SISO" type="xs:string" />
+              <xs:attribute name="EBCDICコードタイプ" type="xs:string" />
+              <xs:attribute name="JEF_KEIS漢字コードタイプ" type="xs:string" />
+              <xs:attribute name="外字使用" type="xs:string" />
+              <xs:attribute name="SISOを出力する" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="項目補助情報">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="全角" type="xs:string" />
+              <xs:attribute name="大文字" type="xs:string" />
+              <xs:attribute name="暦書式" type="xs:string" />
+              <xs:attribute name="暦エラータイプ" type="xs:string" />
+              <xs:attribute name="レコード出力タイプ" type="xs:string" />
+              <xs:attribute name="最終出力タイプ" type="xs:string" />
+              <xs:attribute name="最終出力値" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="レコード補助情報">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="レコード出力タイプ" type="xs:string" />
+              <xs:attribute name="項目ID配列" type="xs:string" />
+              <xs:attribute name="評価方法" type="xs:string" />
+              <xs:attribute name="評価順序" type="xs:string" />
+              <xs:attribute name="with空削除" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="レコードCSV区分値判定情報">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="区分値" type="xs:string" />
+              <xs:attribute name="インデックス" type="xs:string" />
+              <xs:attribute name="ParentID" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="レコードFixed区分値判定情報">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="区分値" type="xs:string" />
+              <xs:attribute name="開始桁" type="xs:string" />
+              <xs:attribute name="桁数" type="xs:string" />
+              <xs:attribute name="文字コード" type="xs:string" />
+              <xs:attribute name="属性" type="xs:string" />
+              <xs:attribute name="位置" type="xs:string" />
+              <xs:attribute name="パディング" type="xs:string" />
+              <xs:attribute name="SISO" type="xs:string" />
+              <xs:attribute name="EBCDICコードタイプ" type="xs:string" />
+              <xs:attribute name="JEF_KEIS漢字コードタイプ" type="xs:string" />
+              <xs:attribute name="レコード数" type="xs:string" />
+              <xs:attribute name="外字使用" type="xs:string" />
+              <xs:attribute name="ParentID" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//レイアウト" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="データストア_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//データストア" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="データストアFixed_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//データストアFixed" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="レコードグループ_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//レコードグループ" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="レコード_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//レコード" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="レコードFixed_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//レコードFixed" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="項目グループ_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//項目グループ" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="項目_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//項目" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="項目Fixed_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//項目Fixed" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="項目補助情報_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//項目補助情報" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="レコード補助情報_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//レコード補助情報" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="レコードCSV区分値判定情報_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//レコードCSV区分値判定情報" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="レコードFixed区分値判定情報_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//レコードFixed区分値判定情報" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <レイアウト ID="1" Name="データストア" Type="1" PropertyID="1" ParentsID="0" />
+  <レイアウト ID="2" Name="ファイルヘッダー" Type="3" PropertyID="1" ParentsID="1" />
+  <レイアウト ID="3" Name="ヘッダー部" Type="3" PropertyID="2" ParentsID="1" />
+  <レイアウト ID="4" Name="レコード区分" Type="5" PropertyID="1" ParentsID="2" />
+  <レイアウト ID="5" Name="データ種別" Type="5" PropertyID="2" ParentsID="2" />
+  <レイアウト ID="6" Name="ボディー部" Type="3" PropertyID="3" ParentsID="1" />
+  <レイアウト ID="7" Name="データ処理日付" Type="5" PropertyID="3" ParentsID="2" />
+  <レイアウト ID="8" Name="データ処理時刻" Type="5" PropertyID="4" ParentsID="2" />
+  <レイアウト ID="9" Name="予備" Type="5" PropertyID="5" ParentsID="2" />
+  <レイアウト ID="10" Name="データ送信元" Type="5" PropertyID="6" ParentsID="2" />
+  <レイアウト ID="11" Name="最終送信先" Type="5" PropertyID="7" ParentsID="2" />
+  <レイアウト ID="12" Name="直接送信先" Type="5" PropertyID="8" ParentsID="2" />
+  <レイアウト ID="13" Name="レコードサイズ" Type="5" PropertyID="9" ParentsID="2" />
+  <レイアウト ID="14" Name="レコード件数" Type="5" PropertyID="10" ParentsID="2" />
+  <レイアウト ID="15" Name="帳票枚数" Type="5" PropertyID="11" ParentsID="2" />
+  <レイアウト ID="16" Name="空白" Type="5" PropertyID="12" ParentsID="2" />
+  <レイアウト ID="17" Name="レコード区分" Type="5" PropertyID="13" ParentsID="3" />
+  <レイアウト ID="18" Name="社コード" Type="5" PropertyID="14" ParentsID="3" />
+  <レイアウト ID="19" Name="取引先コード" Type="5" PropertyID="15" ParentsID="3" />
+  <レイアウト ID="20" Name="レコード連番" Type="5" PropertyID="16" ParentsID="3" />
+  <レイアウト ID="21" Name="レコード長区分" Type="5" PropertyID="17" ParentsID="3" />
+  <レイアウト ID="22" Name="データ種別" Type="5" PropertyID="18" ParentsID="3" />
+  <レイアウト ID="23" Name="ファイル名" Type="5" PropertyID="19" ParentsID="3" />
+  <レイアウト ID="24" Name="データ作成日" Type="5" PropertyID="20" ParentsID="3" />
+  <レイアウト ID="25" Name="対象期間：自" Type="5" PropertyID="21" ParentsID="3" />
+  <レイアウト ID="29" Name="レコード区分" Type="5" PropertyID="24" ParentsID="6" />
+  <レイアウト ID="50" Name="社コード" Type="5" PropertyID="45" ParentsID="6" />
+  <レイアウト ID="48" Name="対象期間：至" Type="5" PropertyID="43" ParentsID="3" />
+  <レイアウト ID="49" Name="自由使用欄" Type="5" PropertyID="44" ParentsID="3" />
+  <レイアウト ID="47" Name="空白" Type="5" PropertyID="42" ParentsID="3" />
+  <レイアウト ID="51" Name="取引先コード" Type="5" PropertyID="46" ParentsID="6" />
+  <レイアウト ID="52" Name="レコード連番" Type="5" PropertyID="47" ParentsID="6" />
+  <レイアウト ID="53" Name="納品日" Type="5" PropertyID="48" ParentsID="6" />
+  <レイアウト ID="54" Name="店コード" Type="5" PropertyID="49" ParentsID="6" />
+  <レイアウト ID="55" Name="伝票区分" Type="5" PropertyID="50" ParentsID="6" />
+  <レイアウト ID="56" Name="伝票番号" Type="5" PropertyID="51" ParentsID="6" />
+  <レイアウト ID="57" Name="請求金額" Type="5" PropertyID="52" ParentsID="6" />
+  <レイアウト ID="58" Name="発行区分" Type="5" PropertyID="53" ParentsID="6" />
+  <レイアウト ID="59" Name="請求区分" Type="5" PropertyID="54" ParentsID="6" />
+  <レイアウト ID="60" Name="分類コード" Type="5" PropertyID="55" ParentsID="6" />
+  <レイアウト ID="61" Name="請求書番号" Type="5" PropertyID="56" ParentsID="6" />
+  <レイアウト ID="62" Name="データ処理日" Type="5" PropertyID="57" ParentsID="6" />
+  <レイアウト ID="63" Name="支払金額" Type="5" PropertyID="58" ParentsID="6" />
+  <レイアウト ID="64" Name="計上区分" Type="5" PropertyID="59" ParentsID="6" />
+  <レイアウト ID="65" Name="マッチ区分" Type="5" PropertyID="60" ParentsID="6" />
+  <レイアウト ID="66" Name="アンマッチ買掛" Type="5" PropertyID="61" ParentsID="6" />
+  <レイアウト ID="67" Name="ダブリ区分" Type="5" PropertyID="62" ParentsID="6" />
+  <レイアウト ID="68" Name="締年月日" Type="5" PropertyID="63" ParentsID="6" />
+  <レイアウト ID="69" Name="支払年月日" Type="5" PropertyID="64" ParentsID="6" />
+  <レイアウト ID="46" Name="自由使用欄" Type="5" PropertyID="41" ParentsID="6" />
+  <レイアウト ID="74" Name="トレイラー部" Type="3" PropertyID="4" ParentsID="1" />
+  <レイアウト ID="75" Name="レコード区分" Type="5" PropertyID="65" ParentsID="74" />
+  <レイアウト ID="76" Name="社コード" Type="5" PropertyID="66" ParentsID="74" />
+  <レイアウト ID="77" Name="取引先コード" Type="5" PropertyID="67" ParentsID="74" />
+  <レイアウト ID="78" Name="レコード連番" Type="5" PropertyID="68" ParentsID="74" />
+  <レイアウト ID="97" Name="レコード件数" Type="5" PropertyID="87" ParentsID="74" />
+  <レイアウト ID="98" Name="伝票件数" Type="5" PropertyID="88" ParentsID="74" />
+  <レイアウト ID="89" Name="請求金額合計" Type="5" PropertyID="79" ParentsID="74" />
+  <レイアウト ID="99" Name="支払金額合計" Type="5" PropertyID="89" ParentsID="74" />
+  <レイアウト ID="94" Name="締年月日" Type="5" PropertyID="84" ParentsID="74" />
+  <レイアウト ID="95" Name="支払年月日" Type="5" PropertyID="85" ParentsID="74" />
+  <レイアウト ID="96" Name="自由使用欄" Type="5" PropertyID="86" ParentsID="74" />
+  <データストア ID="1" フォーマット="1" />
+  <データストアFixed ID="1" レコード判別="0" EOF挿入="0" レコードセパレータフラグ="0" レコードセパレータコード="" ゼロ出力="1" 小数部フォーマット="0" 桁あふれ="1" 不明レコードスキップ="False" スキップサイズ="0" />
+  <レコード ID="1" レコード名="ファイルヘッダー" />
+  <レコード ID="2" レコード名="ヘッダー部" />
+  <レコード ID="3" レコード名="ボディー部" />
+  <レコード ID="4" レコード名="トレイラー部" />
+  <レコードFixed ID="1" 区分値="A" 開始桁="1" 桁数="1" 文字コード="3" 属性="1" 位置="0" パディング="1" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" レコード数="0" 外字使用="False" />
+  <レコードFixed ID="2" 区分値="B" 開始桁="1" 桁数="1" 文字コード="3" 属性="1" 位置="0" パディング="1" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" レコード数="0" 外字使用="False" />
+  <レコードFixed ID="3" 区分値="D" 開始桁="1" 桁数="1" 文字コード="3" 属性="1" 位置="0" パディング="1" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" レコード数="0" 外字使用="False" />
+  <レコードFixed ID="4" 区分値="D" 開始桁="1" 桁数="1" 文字コード="3" 属性="1" 位置="0" パディング="1" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" レコード数="0" 外字使用="False" />
+  <項目 ID="1" 項目名="レコード区分" 項目ID="1001001" 属性="1" 属性チェック="0" />
+  <項目 ID="2" 項目名="データ種別" 項目ID="1001002" 属性="1" 属性チェック="0" />
+  <項目 ID="3" 項目名="データ処理日付" 項目ID="1001003" 属性="8" 属性チェック="0" />
+  <項目 ID="4" 項目名="データ処理時刻" 項目ID="1001004" 属性="10" 属性チェック="0" />
+  <項目 ID="5" 項目名="予備" 項目ID="1001005" 属性="1" 属性チェック="0" />
+  <項目 ID="6" 項目名="データ送信元" 項目ID="1001006" 属性="1" 属性チェック="0" />
+  <項目 ID="7" 項目名="最終送信先" 項目ID="1001007" 属性="1" 属性チェック="0" />
+  <項目 ID="8" 項目名="直接送信先" 項目ID="1001008" 属性="1" 属性チェック="0" />
+  <項目 ID="9" 項目名="レコードサイズ" 項目ID="1001009" 属性="1" 属性チェック="0" />
+  <項目 ID="10" 項目名="レコード件数" 項目ID="1001010" 属性="5" 属性チェック="0" />
+  <項目 ID="11" 項目名="帳票枚数" 項目ID="1001011" 属性="5" 属性チェック="0" />
+  <項目 ID="12" 項目名="空白" 項目ID="1001012" 属性="1" 属性チェック="0" />
+  <項目 ID="13" 項目名="レコード区分" 項目ID="1002001" 属性="1" 属性チェック="0" />
+  <項目 ID="14" 項目名="社コード" 項目ID="1002002" 属性="1" 属性チェック="0" />
+  <項目 ID="15" 項目名="取引先コード" 項目ID="1002003" 属性="1" 属性チェック="0" />
+  <項目 ID="16" 項目名="レコード連番" 項目ID="1002004" 属性="5" 属性チェック="0" />
+  <項目 ID="17" 項目名="レコード長区分" 項目ID="1002005" 属性="1" 属性チェック="0" />
+  <項目 ID="18" 項目名="データ種別" 項目ID="1002006" 属性="1" 属性チェック="0" />
+  <項目 ID="19" 項目名="ファイル名" 項目ID="1002007" 属性="1" 属性チェック="0" />
+  <項目 ID="20" 項目名="データ作成日" 項目ID="1002008" 属性="8" 属性チェック="0" />
+  <項目 ID="21" 項目名="対象期間：自" 項目ID="1002009" 属性="8" 属性チェック="0" />
+  <項目 ID="24" 項目名="レコード区分" 項目ID="1003001" 属性="1" 属性チェック="0" />
+  <項目 ID="41" 項目名="自由使用欄" 項目ID="1003022" 属性="1" 属性チェック="0" />
+  <項目 ID="42" 項目名="空白" 項目ID="1002012" 属性="1" 属性チェック="0" />
+  <項目 ID="43" 項目名="対象期間：至" 項目ID="1002010" 属性="8" 属性チェック="0" />
+  <項目 ID="44" 項目名="自由使用欄" 項目ID="1002011" 属性="1" 属性チェック="0" />
+  <項目 ID="45" 項目名="社コード" 項目ID="1003002" 属性="1" 属性チェック="0" />
+  <項目 ID="46" 項目名="取引先コード" 項目ID="1003003" 属性="1" 属性チェック="0" />
+  <項目 ID="47" 項目名="レコード連番" 項目ID="1003004" 属性="5" 属性チェック="0" />
+  <項目 ID="48" 項目名="納品日" 項目ID="1003005" 属性="8" 属性チェック="0" />
+  <項目 ID="49" 項目名="店コード" 項目ID="1003006" 属性="1" 属性チェック="0" />
+  <項目 ID="50" 項目名="伝票区分" 項目ID="1003007" 属性="1" 属性チェック="0" />
+  <項目 ID="51" 項目名="伝票番号" 項目ID="1003008" 属性="1" 属性チェック="0" />
+  <項目 ID="52" 項目名="請求金額" 項目ID="1003009" 属性="1" 属性チェック="0" />
+  <項目 ID="53" 項目名="発行区分" 項目ID="1003010" 属性="1" 属性チェック="0" />
+  <項目 ID="54" 項目名="請求区分" 項目ID="1003011" 属性="1" 属性チェック="0" />
+  <項目 ID="55" 項目名="分類コード" 項目ID="1003012" 属性="1" 属性チェック="0" />
+  <項目 ID="56" 項目名="請求書番号" 項目ID="1003013" 属性="1" 属性チェック="0" />
+  <項目 ID="57" 項目名="データ処理日" 項目ID="1003014" 属性="8" 属性チェック="0" />
+  <項目 ID="58" 項目名="支払金額" 項目ID="1003015" 属性="6" 属性チェック="0" />
+  <項目 ID="59" 項目名="計上区分" 項目ID="1003016" 属性="1" 属性チェック="0" />
+  <項目 ID="60" 項目名="マッチ区分" 項目ID="1003017" 属性="1" 属性チェック="0" />
+  <項目 ID="61" 項目名="アンマッチ買掛" 項目ID="1003018" 属性="6" 属性チェック="0" />
+  <項目 ID="62" 項目名="ダブリ区分" 項目ID="1003019" 属性="1" 属性チェック="0" />
+  <項目 ID="63" 項目名="締年月日" 項目ID="1003020" 属性="8" 属性チェック="0" />
+  <項目 ID="64" 項目名="支払年月日" 項目ID="1003021" 属性="8" 属性チェック="0" />
+  <項目 ID="65" 項目名="レコード区分" 項目ID="1004001" 属性="1" 属性チェック="0" />
+  <項目 ID="66" 項目名="社コード" 項目ID="1004002" 属性="1" 属性チェック="0" />
+  <項目 ID="67" 項目名="取引先コード" 項目ID="1004003" 属性="1" 属性チェック="0" />
+  <項目 ID="68" 項目名="レコード連番" 項目ID="1004004" 属性="5" 属性チェック="0" />
+  <項目 ID="79" 項目名="請求金額合計" 項目ID="1004007" 属性="6" 属性チェック="0" />
+  <項目 ID="84" 項目名="締年月日" 項目ID="1004009" 属性="8" 属性チェック="0" />
+  <項目 ID="85" 項目名="支払年月日" 項目ID="1004010" 属性="8" 属性チェック="0" />
+  <項目 ID="86" 項目名="自由使用欄" 項目ID="1004011" 属性="1" 属性チェック="0" />
+  <項目 ID="87" 項目名="レコード件数" 項目ID="1004005" 属性="5" 属性チェック="0" />
+  <項目 ID="88" 項目名="伝票件数" 項目ID="1004006" 属性="5" 属性チェック="0" />
+  <項目 ID="89" 項目名="支払金額合計" 項目ID="1004008" 属性="6" 属性チェック="0" />
+  <項目Fixed ID="1" 文字コード="3" 桁数="1" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="1" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="2" 文字コード="3" 桁数="2" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="3" 文字コード="3" 桁数="6" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="4" 文字コード="3" 桁数="6" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="5" 文字コード="3" 桁数="6" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="6" 文字コード="3" 桁数="8" 小数部桁数="0" 位置="0" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="7" 文字コード="3" 桁数="8" 小数部桁数="0" 位置="0" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="8" 文字コード="3" 桁数="8" 小数部桁数="0" 位置="0" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="9" 文字コード="3" 桁数="3" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="10" 文字コード="3" 桁数="6" 小数部桁数="0" 位置="1" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="11" 文字コード="3" 桁数="5" 小数部桁数="0" 位置="1" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="12" 文字コード="3" 桁数="69" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="13" 文字コード="3" 桁数="1" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="14" 文字コード="3" 桁数="4" 小数部桁数="0" 位置="0" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="15" 文字コード="3" 桁数="6" 小数部桁数="0" 位置="0" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="16" 文字コード="3" 桁数="5" 小数部桁数="0" 位置="1" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="17" 文字コード="3" 桁数="3" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="18" 文字コード="3" 桁数="2" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="19" 文字コード="3" 桁数="8" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="20" 文字コード="3" 桁数="6" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="21" 文字コード="3" 桁数="6" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="24" 文字コード="3" 桁数="1" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="41" 文字コード="3" 桁数="22" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="42" 文字コード="3" 桁数="64" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="43" 文字コード="3" 桁数="6" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="44" 文字コード="3" 桁数="17" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="45" 文字コード="3" 桁数="4" 小数部桁数="0" 位置="0" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="46" 文字コード="3" 桁数="6" 小数部桁数="0" 位置="0" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="47" 文字コード="3" 桁数="5" 小数部桁数="0" 位置="1" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="48" 文字コード="3" 桁数="6" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="49" 文字コード="3" 桁数="5" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="50" 文字コード="3" 桁数="2" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="51" 文字コード="3" 桁数="11" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="52" 文字コード="3" 桁数="10" 小数部桁数="0" 位置="1" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="53" 文字コード="3" 桁数="2" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="54" 文字コード="3" 桁数="2" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="55" 文字コード="3" 桁数="4" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="56" 文字コード="3" 桁数="7" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="57" 文字コード="3" 桁数="6" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="58" 文字コード="3" 桁数="10" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="59" 文字コード="3" 桁数="1" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="60" 文字コード="3" 桁数="1" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="61" 文字コード="3" 桁数="10" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="62" 文字コード="3" 桁数="1" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="63" 文字コード="3" 桁数="6" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="64" 文字コード="3" 桁数="6" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="65" 文字コード="3" 桁数="1" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="66" 文字コード="3" 桁数="4" 小数部桁数="0" 位置="0" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="67" 文字コード="3" 桁数="6" 小数部桁数="0" 位置="0" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="68" 文字コード="3" 桁数="5" 小数部桁数="0" 位置="1" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="79" 文字コード="3" 桁数="11" 小数部桁数="0" 位置="1" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="84" 文字コード="3" 桁数="6" 小数部桁数="0" 位置="0" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="85" 文字コード="3" 桁数="6" 小数部桁数="0" 位置="0" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="86" 文字コード="3" 桁数="68" 小数部桁数="0" 位置="0" パディング="1" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="87" 文字コード="3" 桁数="5" 小数部桁数="0" 位置="1" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="88" 文字コード="3" 桁数="5" 小数部桁数="0" 位置="1" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目Fixed ID="89" 文字コード="3" 桁数="11" 小数部桁数="0" 位置="1" パディング="2" 変換エラー="0" 置換コード="" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" SISOを出力する="True" />
+  <項目補助情報 ID="1" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="1" 最終出力値="A" />
+  <項目補助情報 ID="2" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="1" 最終出力値="11" />
+  <項目補助情報 ID="3" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="4" 全角="False" 大文字="False" 暦書式="HHmmss" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="5" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="6" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="7" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="8" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="9" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="1" 最終出力値="128" />
+  <項目補助情報 ID="10" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="2" 最終出力値="出力レコード件数" />
+  <項目補助情報 ID="11" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="12" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="13" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="1" 最終出力値="H" />
+  <項目補助情報 ID="14" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="01" />
+  <項目補助情報 ID="15" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="16" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="17" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="1" 最終出力値="128" />
+  <項目補助情報 ID="18" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="1" 最終出力値="11" />
+  <項目補助情報 ID="19" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="20" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="21" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="24" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="1" 最終出力値="B" />
+  <項目補助情報 ID="41" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="42" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="43" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="44" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="45" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="46" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="47" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="48" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="49" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="50" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="51" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="52" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="53" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="54" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="55" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="56" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="57" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="58" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="59" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="60" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="61" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="62" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="63" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="64" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="65" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="1" 最終出力値="T" />
+  <項目補助情報 ID="66" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="67" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="68" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="79" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="84" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="85" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="86" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="87" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="2" 最終出力値="出力レコード件数" />
+  <項目補助情報 ID="88" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <項目補助情報 ID="89" 全角="False" 大文字="False" 暦書式="" 暦エラータイプ="0" レコード出力タイプ="0" 最終出力タイプ="0" 最終出力値="" />
+  <レコード補助情報 ID="1" レコード出力タイプ="0" 項目ID配列="" 評価方法="0" 評価順序="0" with空削除="False" />
+  <レコード補助情報 ID="2" レコード出力タイプ="0" 項目ID配列="" 評価方法="0" 評価順序="0" with空削除="False" />
+  <レコード補助情報 ID="3" レコード出力タイプ="0" 項目ID配列="" 評価方法="0" 評価順序="0" with空削除="False" />
+  <レコード補助情報 ID="4" レコード出力タイプ="2" 項目ID配列="76,77" 評価方法="1" 評価順序="1" with空削除="False" />
+  <レコードFixed区分値判定情報 ID="86" 区分値="A" 開始桁="1" 桁数="1" 文字コード="3" 属性="1" 位置="0" パディング="1" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" ParentID="1" />
+  <レコードFixed区分値判定情報 ID="87" 区分値="H" 開始桁="1" 桁数="1" 文字コード="3" 属性="1" 位置="0" パディング="1" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" ParentID="2" />
+  <レコードFixed区分値判定情報 ID="88" 区分値="B" 開始桁="1" 桁数="1" 文字コード="3" 属性="1" 位置="0" パディング="1" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" ParentID="3" />
+  <レコードFixed区分値判定情報 ID="89" 区分値="T" 開始桁="1" 桁数="1" 文字コード="3" 属性="1" 位置="0" パディング="1" SISO="0" EBCDICコードタイプ="1" JEF_KEIS漢字コードタイプ="1" 外字使用="False" ParentID="4" />
+</マッピングレイアウト>

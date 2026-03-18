@@ -1,0 +1,7 @@
+project	https://github.com/Koga-Senbokubiz/project
+
+git status
+git add .
+git commit -m "order_x2f_step3 update"
+git push
+pwd

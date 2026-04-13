@@ -21,9 +21,10 @@ set PYTHONUTF8=1
 
 REM ---- ä¬ã´ïœêîíËã` ----
 set PROJECT_ROOT=D:\github\project
-set EE_SETTING_DIR=C:\Intercom\EasyExchange\Setting
 set DICTIONARY_DIR=%PROJECT_ROOT%\dictionary
+set SCHEMA_DIR=%PROJECT_ROOT%\schema
 set TOOLS_DIR=%PROJECT_ROOT%\tools
+set GENERATED_DIR=%PROJECT_ROOT%\generated
 set TEMPLATE_DIR=%PROJECT_ROOT%\template
 set LOG_DIR=%PROJECT_ROOT%\logs
 set DATA_DIR=%PROJECT_ROOT%\data

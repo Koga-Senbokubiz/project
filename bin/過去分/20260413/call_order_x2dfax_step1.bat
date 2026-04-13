@@ -6,15 +6,15 @@ REM ==========================================
 
 call "%~dp0common_env.bat" v1_3
 
-set INPUT_XML=%WORK_DIR%\order_x2f\00030_20260114062503.xml
-set OUTPUT_XML=%WORK_DIR%\order_x2f\order_x2f_step1.xml
+set INPUT_XML=%WORK_DIR%\order_X2DFAX\00030_20260114062503.xml
+set OUTPUT_XML=%WORK_DIR%\order_X2DFAX\order_x2dfax_step1.xml
 
-set SCRIPT=%PROJECT_ROOT%\tools\domains\order\order_x2f_step1.py
+set SCRIPT=%PROJECT_ROOT%\tools\domains\order\order_x2dfax_step1.py
 
 echo.
 echo ==========================================
-echo Order-X2F Step1 start
-call "%~dp0common_log.bat" Order-X2F Step1 start
+echo Order-X2DFAX Step1 start
+call "%~dp0common_log.bat" Order-X2DFAX Step1 start
 echo ==========================================
 
 python "%SCRIPT%" "%INPUT_XML%" "%OUTPUT_XML%"

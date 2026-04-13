@@ -1,0 +1,7 @@
+project	https://github.com/Koga-Senbokubiz/project
+
+git status
+git add .
+git commit -m "update 2026.04.13"
+git push
+pwd
